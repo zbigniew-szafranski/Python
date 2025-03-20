@@ -1,0 +1,4 @@
+To jest pierwszy komentarz.
+To jest z kolei drugi komentarz.
+W tym pliku jest więcej komentarzy.
+Ciekawe jak program poradzi sobie z przeszukiwaniem tego pliku?

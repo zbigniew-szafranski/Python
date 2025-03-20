@@ -1,0 +1,8 @@
+Bonusowe minićwiczenia:
+
+1. NASZ program, który zlicza ile jest słów w pliku tekstowym. 
+
+2. Napisz , który wczytuje z pliku słowaw, a następnie zapisuje w innym pliku tylko te słowa, które są samymi wielkimi literami.
+
+3. Napisz program, który wczytuje z pliku liczby, a następnie zapisuje w innym pliku tylko te liczby, które są dodatnie. 
+KONIEC

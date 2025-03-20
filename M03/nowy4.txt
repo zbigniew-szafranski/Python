@@ -1,0 +1,5 @@
+To jest plik i dane do zanonimizowania:
+Pesel XXXXXX zarobek XXXXX zł
+Wiele innych danych rok XXXX To jest plik i dane do zanonimizowania:
+Pesel XXXXXX zarobek XXXXX zł
+Wiele innych danych rok XXXX 

@@ -1,0 +1,2 @@
+ten tekst chcemy umieścić w plikumożesz zapisać więcej tekstu
+to będzie w kolejne linii dzięki \n

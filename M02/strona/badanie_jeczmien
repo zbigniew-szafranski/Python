@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pl" class="ko_Theme">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="generator" content="Kopage" />
+	<meta name="description" content="Zielona żywność to pomoc w oczyszczaniu i dożywianiu organizmu. Chciałbym Państwu przybliżyć produkty, badania, statystyki, opinie użytkowników na temat soku z młodego jęczmienia oraz chlorelli pyrenoidosy" />
+	<meta name="keywords" content="zielonki, zielona żywność, chlorella, jęczmień, sok, algi, detoks, młody jęczmień, oczyszczanie, organizm, samouzdrawianie" />
+
+	<title>Jęczmień &mdash; Republika Zielonej Żywności</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="dns-prefetch" href="https://fonts.googleapis.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin>
+
+	<base href="/">
+	<link rel="shortcut icon" href="https://www.republikazielonejzywnosci.com/data/files/logo.jpg" />
+	<link rel="apple-touch-icon" href="https://www.republikazielonejzywnosci.com/data/files/logo.jpg" />
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js" type="text/javascript"></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="//www.republikazielonejzywnosci.com/inc/live.css?v=4.5.3" type="text/css" rel="stylesheet" /><link href="//fonts.googleapis.com/css?family=Playfair+Display:200,400,700|Roboto:200,400,700&amp;subset=latin-ext&amp;display=swap" rel="stylesheet" type="text/css" />
+	<link href="//fonts.googleapis.com/css?family=Playfair+Display|Roboto&amp;text=ęóąśłżźćńĘÓĄŚŁŻŹĆŃ&amp;display=swap" rel="stylesheet" type="text/css" />
+
+
+	<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script><![endif]-->
+
+	<style>:root{--ui-color-accent: #179BD7;--ui-color-accent-75: rgba(23,155,215,0.7);--ui-color-accent-50: rgba(23,155,215,0.5);--ui-color-accent-25: rgba(23,155,215,0.25);--ui-color-accent-light: rgba(23,155,215,0.1);--ui-color-stripes-accent:repeating-linear-gradient(
+	-45deg,#005f9b,#179BD7 20px,#005f9b 20px,#005f9b 50px,#179BD7 50px,#179BD7 65px);--ui-color-leftmenu:#293A4A;}</style>
+	<!--The Open Graph-->
+	<meta property="og:image" content="https://www.republikazielonejzywnosci.com/data/files/chpr.jpg" /><meta name="twitter:image" content="https://www.republikazielonejzywnosci.com/data/files/chpr.jpg">
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','G-MWV2CBH5PX');</script>
+	<!-- End Google Tag Manager -->
+<style>.ko_Theme .topmenu a:hover, .ko_Theme .topmenu .active a {background:inherit}.ko_Theme .menuHolder li a {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;line-height: 1;color: inherit;text-shadow: none}.ko_Theme .menuHolder li {display: inline-block;padding:0}.ko_Theme .menuHolder{ flex-flow: row wrap}.ko_Theme .menuHolder,.ko_Theme #headerMenu{padding:0}.ko_Theme .logoHolder #logoReplacer h2,.ko_Theme .logoHolder a,.ko_Theme .logoHolder {line-height:1;padding:0;margin:0;height:auto}.ko_Theme .logoHolder img{max-height:auto}.ko_Theme #headerMenu .container {/*overflow:auto;*/display:flex;flex-direction: row;justify-content: space-between;align-items: center}:root{--color1:#749D37;--color2:#9E7849;--color1_rgb: 116,157,55;--color1_25:#dce7cd;--color1_50:#bace9b;--color1_75:#97b669;--color1_125:#577629;--color1_150:#3a4f1c;--color1_175:#1d270e;--color2_rgb: 158,120,73;--color2_25:#e7ddd2;--color2_50:#cfbca4;--color2_75:#b69a77;--color2_125:#775a37;--color2_150:#4f3c25;--color2_175:#281e12;--color1_bw:rgba(255,255,255,0.8);--color1_25_bw:rgba(0,0,0,0.8);--color1_50_bw:rgba(0,0,0,0.8);--color1_75_bw:rgba(255,255,255,0.8);--color1_125_bw:rgba(255,255,255,0.8);--color1_150_bw:rgba(255,255,255,0.8);--color1_175_bw:rgba(255,255,255,0.8);--color2_bw:rgba(255,255,255,0.8);--color2_25_bw:rgba(0,0,0,0.8);--color2_50_bw:rgba(0,0,0,0.8);--color2_75_bw:rgba(255,255,255,0.8);--color2_125_bw:rgba(255,255,255,0.8);--color2_150_bw:rgba(255,255,255,0.8);--color2_175_bw:rgba(255,255,255,0.8);;--font1:Playfair Display;--font2:Roboto;--font3:Helvetica Neue,sans-serif;--color1_rgb: 116,157,55;--color1_25:#dce7cd;--color1_50:#bace9b;--color1_75:#97b669;--color1_125:#577629;--color1_150:#3a4f1c;--color1_175:#1d270e;--color2_rgb: 158,120,73;--color2_25:#e7ddd2;--color2_50:#cfbca4;--color2_75:#b69a77;--color2_125:#775a37;--color2_150:#4f3c25;--color2_175:#281e12;--color1_bw:rgba(255,255,255,0.8);--color1_25_bw:rgba(0,0,0,0.8);--color1_50_bw:rgba(0,0,0,0.8);--color1_75_bw:rgba(255,255,255,0.8);--color1_125_bw:rgba(255,255,255,0.8);--color1_150_bw:rgba(255,255,255,0.8);--color1_175_bw:rgba(255,255,255,0.8);--color2_bw:rgba(255,255,255,0.8);--color2_25_bw:rgba(0,0,0,0.8);--color2_50_bw:rgba(0,0,0,0.8);--color2_75_bw:rgba(255,255,255,0.8);--color2_125_bw:rgba(255,255,255,0.8);--color2_150_bw:rgba(255,255,255,0.8);--color2_175_bw:rgba(255,255,255,0.8);}#contentArea .koColor {color:#749D37;}ul.koCheckList li:before {background:#749D37;}.ko_Theme #website .btn-primary {background-color:var(--color1);border-color:var(--color1);}.ko_Theme #website .btn-outline-primary {color:var(--color1);border-color:var(--color1);}.ko_Theme #website .btn-outline-primary:hover {background-color:var(--color1);color:var(--color1_bw);border-color:var(--color1);}#website .page-item.active .page-link {background-color:#749D37;color:var(--color1_bw);border-color:var(--color1);}#contentArea a:not(.btn),#contentArea a.btn-link {color:var(--color1)}#website.koMenu a:not(.btn):not(.koMenuButton),#website.koMenu a.btn-link {color:var(--color1)}.ko_Theme #contentArea, .ko_Theme .koThemeDark #contentArea .whiteShadowContainer {color:rgba(0, 0, 0, .5)}#contentArea h1, #contentArea h2, #contentArea h3,#contentArea h1 a, #contentArea h2 a, #contentArea h3 a, .koThemeDark #contentArea .whiteShadowContainer strong, .koThemeDark #contentArea .whiteShadowContainer h1, .koThemeDark #contentArea .whiteShadowContainer h2, .koThemeDark #contentArea .whiteShadowContainer h3{color: var(--color1_150);}#contentArea h4, #contentArea h5, #contentArea h6,#contentArea h4 a, #contentArea h5 a, #contentArea h6 a, .koThemeDark #contentArea .whiteShadowContainer strong, .koThemeDark #contentArea .whiteShadowContainer h4, .koThemeDark #contentArea .whiteShadowContainer h5, .koThemeDark #contentArea .whiteShadowContainer h6 {color: var(--color1_150);}.ko_Theme #website #footerContent {color: rgba(0, 0, 0, .5);}.ko_Theme #website #footerContent h1,.ko_Theme #website #footerContent h2,.ko_Theme #website #footerContent h3,.ko_Theme #website #footerContent h4,.ko_Theme #website #footerContent h5,.ko_Theme #website #footerContent h6 {color: rgba(0, 0, 0, 1);}.ko_Theme #website, .ko_Theme #website p{font-family:var(--font2),sans-serif;}.ko_Theme #website a.btn, .ko_Theme #website button.btn{font-family:var(--font2),sans-serif;}.ko_Theme #website h1,.ko_Theme #website h2,.ko_Theme #website h3{font-family:var(--font1),sans-serif;font-weight:700}.ko_Theme #website h4,.ko_Theme #website h5,.ko_Theme #website h6{font-family:var(--font1),sans-serif;font-weight:700}.ko_Theme #website .topmenu{font-family:var(--font2),sans-serif;font-weight:400}.ko_Theme #website .logoHolder h2{font-family:var(--font1),sans-serif;font-weight:700}.ko_Theme #website #footerContent {font-family:var(--font2),sans-serif;}.ko_Theme #website #footerContent h1,.ko_Theme #website #footerContent h2,.ko_Theme #website #footerContent h3,.ko_Theme #website #footerContent h4,.ko_Theme #website #footerContent h5,.ko_Theme #website #footerContent h6 {font-family:var(--font1),sans-serif;}.ko_Theme .menuHolder li.topmenuSocial > span{margin-top:0px;}.ko_Theme #headerContent:not(.koZeroPadding),.ko_Theme #subpageHeaderContent:not(.koZeroPadding){}.ko_Theme #headerMenu{/*overflow:auto;*//*display:flex;flex-direction: row;justify-content: space-between;align-items: center;*/background:linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);padding:30px;margin:0px;border:0px solid var(--color1);border-radius:0px;position:absolute;display:block;position:fixed;z-index:65405;left:0;top:0;;}.ko_Theme .logoHolder{padding:0px;;white-space: nowrap;}.ko_Theme .logoHolder h2{font-size:24px;color:rgb(255, 255, 255);display: flex;align-items: center;min-height:40px;}@media (max-width: 768px){.ko_Theme .logoHolder h2{font-size:22px;}}.ko_Theme .logoHolder img{max-height:40px;height:40px;min-height:40px;}.ko_Theme .menuHolder { display: flex;}.ko_Theme .menuHolder li{}.ko_Theme .menuHolder li a{font-size:17px;color:rgb(255, 255, 255);padding:5px 0px 5px 0px;margin:0px 0px 0px 15px;border-radius:0px;border:solid transparent;border-width:0px 0px 2px 0px;text-shadow:1px 1px 1px rgba(0,0,0,0.1);text-transform:uppercase;transition:0.2s all;}.ko_Theme .menuHolder li.active a,.ko_Theme .menuHolder li a:hover{color:rgb(255, 255, 255);border-color:rgb(255, 255, 255);}.ko_Theme .menuHolder li.accent1 a,.ko_Theme .menuHolder li.accent1.active a{font-size:15px;color:rgb(84, 84, 84);background:rgb(255, 255, 255);padding:10px;margin:0px 0px 0px 30px;border-radius:5px;border:0px solid var(--color2_175);}.ko_Theme .menuHolder li.accent1.active a,.ko_Theme .menuHolder li.accent1 a:hover{color:rgb(0, 0, 0);background:rgb(255, 255, 255);}.ko_Theme .menuHolder li.accent2 a,.ko_Theme .menuHolder li.accent2.active a{font-size:15px;color:rgb(255, 255, 255);padding:9px;margin:0px 0px 0px 5px;border-radius:5px;border:1px solid rgb(255, 255, 255);}.ko_Theme .menuHolder li.accent2.active a,.ko_Theme .menuHolder li.accent2 a:hover{color:rgb(255, 255, 255);background:rgba(255,255,255,0.3);border-color:rgb(255, 255, 255);}.ko_Theme .menuHolder li.topmenuSocial a{color:rgb(255, 255, 255)}.ko_Theme #headerMenu .container{max-width:inherit;}#contentArea:not(.lpMode) #contentAreaElement + .kedit::before{content:"";white-space:nowrap;display:block;padding-top:105px;}#contentArea:not(.lpMode) #contentAreaElement + .kedit .k_Edit,#contentArea:not(.lpMode) #contentAreaElement + .kedit .koInModuleMenu{top:105px;border-top-right-radius: 4px;}#contentArea:not(.lpMode) #contentAreaElement + .kedit span.k_EditMore{border-radius: 0 4px 4px 0;}.keditColumn .k_Edit,.keditColumn .koInModuleMenu{top:2px!important}.koMenuActive #headerMenu{left:100px}#header{z-index:65405!important}</style>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MWV2CBH5PX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MWV2CBH5PX');
+</script>
+
+</head>
+<body class="" >
+<div id="websiteLoading" onclick="var elem = document.getElementById('websiteLoading');elem.parentNode.removeChild(elem);" onkeyup="var elem = document.getElementById('websiteLoading');elem.parentNode.removeChild(elem);" class="isLoading isLoading-1"><div style="background:white;position:absolute;top:0;left:0;right:0;bottom:0;height:100%;width:100%" class="d-none"></div><noscript><style>#websiteLoading{display:none!important}body{visibility:visible!important;overflow:auto!important}</style></noscript><style>		body{overflow:hidden}		body.body{visibility:visible;overflow:auto}		#websiteLoading{visibility:visible;position:fixed;top:0;left:0;right:0;bottom:0;transition:0.5s all;z-index:100000;background: linear-gradient(135deg, rgba(255,255,255,.95) 20%, rgba(255,255,255,.5), rgba(255,255,255,.95) 80%);cursor:wait}		#websiteLoading.isLoading-1{background:#fff;}		#websiteLoading.isLoaded{opacity:0;cursor:default;pointer-events:none}		@-webkit-keyframes koLoadingRotation {		to {			-webkit-transform: rotate(360deg);					transform: rotate(360deg);		}		}		@keyframes koLoadingRotation {		to {			-webkit-transform: rotate(360deg);					transform: rotate(360deg);		}		}		.isLoading .spinner {		-webkit-animation: koLoadingRotation 1.5s linear infinite;				animation: koLoadingRotation 1.5s linear infinite;			/*will-change: transform;*/		}		.isLoading .spinner .path {		-webkit-animation: dash 1.5s ease-in-out infinite;				animation: dash 1.5s ease-in-out infinite;		}		@-webkit-keyframes dash {		0% {			stroke-dasharray: 1, 150;			stroke-dashoffset: 0;			stroke:var(--color1);		}		50% {			stroke-dasharray: 90, 150;			stroke-dashoffset: -35;			stroke:var(--color2);		}		100% {			stroke-dasharray: 90, 150;			stroke-dashoffset: -124;			stroke:var(--color1);		}		}		@keyframes dash {		0% {			stroke-dasharray: 1, 150;			stroke-dashoffset: 0;			stroke:var(--color1);		}		50% {			stroke-dasharray: 90, 150;			stroke-dashoffset: -35;			stroke:var(--color2);		}		100% {			stroke-dasharray: 90, 150;			stroke-dashoffset: -124;			stroke:var(--color1);		}		}		#websiteLoading::after {			content:"";			background: #fff;			border-radius:100%;			box-shadow: 5px 5px 50px rgba(0,0,0,0.1);			position: absolute;			top: 50%;			left: 50%;			margin: -57px 0 0 -57px;			width: 114px;			height: 114px;		}		</style><svg class="spinner" viewBox="0 0 50 50" style="z-index: 2;position: absolute;top: 50%;left: 50%;width:120px;height:120px;	  margin: -60px 0 0 -60px;"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="2" style="stroke: #ccc; stroke: var(--color1);stroke-linecap: round;"></circle></svg></div><div id="website" class=""><header id="header"><div id="headerMenu"><div class="container"><div class="logoHolder skiptranslate"><a href="/" class="logo"><h2><img src="data/files/logo.jpg" style="border:0" id="WebsiteLogo" alt="Republika Zielonej Żywności" /></h2></a></div>
+
+	<ul class="menuHolder topmenu">
+		<li><a href="https://www.republikazielonejzywnosci.com"><span>Główna</span></a></li>
+		<li><a href="produkty" rel="dropmenu_1_2"><span>Produkty</span></a></li>
+		<li><a href="blog"><span>Blog</span></a></li>
+		<li><a href="jeczmien-1"><span>Jęczmień</span></a></li>
+		<li><a href="chlorella-2"><span>Chlorella</span></a></li>
+		<li><a href="badania" rel="dropmenu_1_5"><span>Badania</span></a></li>
+		<li><a href="filmy"><span>Filmy</span></a></li>
+		<li class="accent2 accents_start"><a href="sklep"><span>SKLEP</span></a></li>
+		<li class="accent1"><a href="kontakt"><span>Kontakt</span></a></li>
+		<li class="topmenuSocial"><span><a class="koSocialFacebookHover" target="_blank" href="https://www.facebook.com/61556983895824"><i class="fab fa-facebook-square"></i></a><a class="koSocialYouTubeHover" target="_blank" href="https://www.youtube.com/channel/UCGSK5HMh8n0YgvtLEKhaNZQ"><i class="fab fa-youtube"></i></a><a class="koSocialPhoneHover" href="tel:881 957 757"><i class="fas fa-phone-square-alt"></i></a><a class="koSocialMailHover" href="mailto:kontakt@republikazielonejzywnosci.com"><i class="fas fa-envelope"></i></a></span></li>
+	</ul>
+
+</div></div></header><main class="WxEditableArea" id="contentArea"><div id="contentAreaElement" class="kelement"></div><section data-pcid="4007" class="kedit lazy entered loaded keditTextShadow keditDark parallax-window" data-background="data/files/20211105_080811.jpg" data-background-pos="1-50% 0" data-src="data/files/20211105_080811.jpg" data-parallax="1" data-padding="200-50" data-keditor="1" id="kpg_1992570" style="background: url() no-repeat 50% 0;background-size:cover;;padding-top:200px;padding-bottom:50px">
+
+    <div class="container">
+
+    <div class="row">
+        <div class="col-lg">
+            <div class="col-container">
+            
+            <ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.php">Strona główna</a></li><li class="breadcrumb-item"><div class="keditable d-inline-block">Jęczmień</div></li></ol>
+            <h1 class="keditable">Jęczmień</h1>
+
+            </div>
+        </div>
+    </div>
+
+        
+        
+    </div>
+
+<div class="keditLayer_footer h-auto" data-color="#fff" data-style="3" data-height="h-auto" style="fill:#fff;color:#fff;"><svg width="100%" height="100%" viewBox="0 0 2375 70" preserveAspectRatio="none">
+				<g transform="matrix(0.996772, 0, 0, 0.897409, -266.565979, -288.565582)">
+					<g transform="matrix(1.65604,0,0,1.65604,266.426,321.946)">
+						<path d="M1440,21.21L1440,47.538L0,47.538L0,21.21C174.892,37.202 391.545,60.277 720,21.21C958.32,-7.136 1164.11,-5.833 1440,21.21Z"></path>
+					</g>
+				</g>
+			</svg></div></section><section data-pcid="4072" id="kpg_122955" class="kedit" data-padding="0-0" style=";padding-top:0px;padding-bottom:0px">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-md-8 text-center">
+                <h1 class="keditable" data-aos="fade-up">Badanie Jęczmienia</h1>
+                
+                
+            </div>
+        </div>
+    </div>
+
+</section><section data-pcid="4016.2" id="kpg_70348" class="kedit" data-padding="20-20" style=";padding-top:20px;padding-bottom:20px">
+    <div class="container text-center">
+        <span class="keditable d-none"></span>
+        <img class="img-fluid kimgfilter8 lazy" alt="" title="" data-src="data/files/polejeczmienia_1678904660.jpg">
+    </div>
+</section><section data-pcid="4002" id="kpg_506656" class="kedit" data-padding="10-10" style=";padding-top:10px;padding-bottom:10px"><div class="container">
+    
+    <h4 class="mt-2 mb-2 keditable"><b>Sok z Jęczmienia to potężny wzmacniacz odporności, zawierający
+            silne przeciwutleniacze. Jednym z tych przeciwutleniaczy jest
+            alfa-tokoferol, który może być odpowiedzialny za działanie
+            przeciwnowotworowe rośliny.<br><br></b></h4>
+    <div class="keditable" style="font-size: 20px;">
+        <div>
+            „(…) choć jego mechanizm nie jest do
+            końca poznany, to badania laboratoryjne wskazują że alfa-tokoferol
+            wydaje się hamować kilka typów nowotworów, w tym białaczki, nowotworu
+            mózgu i raka prostaty.”</div>
+        <div></div>
+        <div></div>
+        <div>Badanie, które zostało przeprowadzone na
+            komórkach rakowych białaczki ( leczenie zostało wykonane na odwodnionym
+            ekstrakcie z młodej trawy jęczmiennej)&nbsp;pokazało, że zginęły one niemal
+            całkowicie.&nbsp;W kolejnym badaniu, ekstrakt hamował wzrost trzech typów
+            komórek raka prostaty nawet o 100% (…)”&nbsp;Alan L. Goldstein, Ph.D.,
+            przewodniczący Biochemii Dept w George Washington School of Medicine i
+            Nauk o Zdrowiu w Waszyngtonie.&nbsp;<strong>Badany był jedynie ekstrakt z trawy jęczmiennej, nie zaś suszone
+                siano z jęczmienia.</strong></div><br>
+        <div>Sok z Jęczmienia jest jednym z największych naturalnych źródeł&nbsp;<strong>enzymu dysmutazy ponadtlenkowej
+                (SOD)</strong>, czyli super enzymu, który niszczy szkodliwe wolne rodniki (większość SOD dostępnych na
+            rynku jest wyciągiem z wątroby bydła.)</div>
+        <div></div><br>
+        <div>Sok z Jęczmienia zawiera również&nbsp;<strong>DIGI i P4D1</strong>&nbsp;które
+            sprawiają, że SOD staje się jeszcze bardziej skuteczny. (Odkrycie dr K.
+            Kabota, Przewodniczącego Wydziału Farmakologii Science University of
+            Tokyo.)</div>
+        <div></div>
+    </div><br>
+    <div class="mt-2 mb-2 keditable">
+        <div><strong>Uwaga</strong>: Nie wszystkie produkty jęczmienne
+            (mielone siano jęczmienne lub suszona trawa) zawierają SOD. Istnieje on
+            tylko w przypadku, kiedy sok poddawany jest specjalnej obróbce cieplnej,
+            czyli suszony jest w maksymalnej temperaturze 31 st. C., aby zachował
+            żywe enzymy).</div>
+        <div></div><br>
+        <div>Bio Jęczmień nie zawiera żadnych domieszek, jest
+            czystym, naturalnym produktem. Rośliny są zbierane w okresie największej
+            witalności, gdy wysysają olbrzymie ilości substancji odżywczych wprost z
+            ziemi, wody, powietrza i słońca. Wysuszony sok z jęczmienia nie zawiera
+            glutenu, nie jest pasteryzowany i jest maksymalnie wchłanialny.
+            Opakowanie zawiera 300 g Bio Jęczmienia w plastikowym słoiku oraz ulotkę
+            informacyjną.</div><br>
+        <div></div>
+        <div><strong>Ważna rola w procesie starzenia</strong></div><br>
+        <div>Sok z młodej trawy jęczmiennej zawiera także<strong> Glycosylisovitexin, 2′-0-GIV</strong>,
+            który jest silnym przeciwutleniaczem, odkrytym przez Takayuki
+            Shibamoto, Ph.D., profesora i byłego przewodniczącego wydziału
+            Toksykologii Środowiskowej na Uniwersytecie California-Davis, który
+            opublikował ponad 200 prac naukowych. 2′-O-GIV jest to isoflavonoid
+            rozpuszczalny w tłuszczu i jest zdolny do zapobiegania miażdżycy tętnic.
+            Badania pokazują, że może również odgrywać ważną rolę prewencyjną w
+            procesie starzenia i mutagenezy oraz zapobiegać szkodliwości
+            promieniowania UV. Testy wykazały, że 2′-O-GIV nie był obecny w suszonej
+            trawie jęczmiennej, a tylko w najlepszej jakości suszonym ekstrakcie z
+            tejże rośliny. (Hagiwara, H. Hagiwara, Shibota JAOCS, tom. 73, nr 5,
+            1996)<br><br>Suszony wyciąg z liści Jęczmienia ma też ogromną moc
+            doprowadzania naszego organizmu do równowagi kwasowo-zasadowej. Dla
+            porównania szpinak ma zasadowość około 39,6 natomiast sok z Jęczmienia
+            aż 66,4.</div></div><br>
+    
+</div></section>
+<section data-pcid="4016.2" id="kpg_822954" class="kedit" data-padding="10-10" style=";padding-top:10px;padding-bottom:10px"><div class="text-center container">
+        <span class="keditable d-none"></span>
+        <img class="img-fluid kimgfilter8 lazy" alt="" title="" data-src="data/files/imbryk.jpg">
+    </div></section><section data-pcid="4002" id="kpg_318872" class="kedit" data-padding="20-30" style=";padding-top:20px;padding-bottom:30px"><div class="container">
+    <div class="row">
+        <div class="col text-start">
+
+            <div class="keditable" style="font-size: 18px;">
+                <div><h4><b>Ekstrakt z jęczmienia jest bogatym źródłem chlorofilu</b>.<strong><br></strong></h4></div>
+                <div><strong><br></strong></div>
+                <div><strong>Chlorofil</strong> poprawia
+                    pracę serca, wpływa korzystnie na układ naczyniowy, jelita i płuca.”
+                    Food Science for All, Nowa teoria Żywienia Sunlight , E. Bircher.</div>
+                <div>Chlorofil zapewnia nam ochronę przed zagrożeniami spowodowanymi przez
+                    promieniowanie UV oraz rentgenowskie. Eksperymenty w 1950 roku wykazały,
+                    że promieniowanie RTG któremu poddano świnki morskie, zostało
+                    unieszkodliwione natychmiast po dodaniu do jedzenia większej ilosci
+                    chlorofilu. Zwierzęta cakowicie odzyskały zdrowie. <br><br>
+                    <b>Badanie:</b> „Wpływ diety na skutki biologiczne organizmu przed promieniowaniem” M. Larbque,
+                    experimental, 6:25, 1950 i dalsze badania na temat redukcji
+                    x-napromieniowania świnek morskich dzięki surowcom roślinnym, Instytut
+                    Armed Forces. NR 12-61 przez DH Calloway, WK Calhoun &amp; AH Munson,
+                    1961</div>
+                <div></div><br>
+                <div>Sok z Jęczmienia działa przeciwzapalnie, anty-wrzodowo, obniża poziom cukru we krwi i
+                    zwiększa wytrzymałość i odporność. (według dr Kazuhiko Kuboto, Ph.D.)</div>
+                <div></div><br>
+                <div style="font-size: 16px;"><b>„Ocena młodego Jęczmienia jako potencjalnego źródła cennych substancji
+                        odżywczych.”</b></div>
+                <div><b><br></b></div>
+                <div>Jedną z możliwości, żeby zrównoważyć w sposób naturalny wartość spożycia
+                    dostępnego dzisiaj jedzenia, jest dieta wzbogacona o tak zwaną „zieloną
+                    żywność”, czyli świeże lub suszone produkty pochodzenia roślinnego.</div>
+                <br>
+                <div>Młode części roślin zawierają ogromne ilości witamin oraz prowitaminy, przeciwutleniacze i inne
+                    substancje biologicznie czynne. Oczywiście, jeżeli te rośliny hodowane są na dobrej glebie i
+                    podlewane czystą wodą.</div> <br>
+                <div>Młody Jęczmień zawiera znaczne ilości wapnia, miedzi, żelaza, magnezu, potasu, cynk,
+                    ß-karoten, kwas foliowy, kwas pantotenowy, witaminy: B1,B2, B6, C i E
+                    oraz chlorofil. Jednakże, zawartość składników odżywczych wszystkich
+                    odmian jęczmienia zależy od tego, gdzie rośliny rosną, ważna jest jakość
+                    gleby, średnia suma opadów, a także technika zbioru (Droushiotis 1984).</div>
+                <br>
+                <div><b>Najwyższe stężenia składników odżywczych w młodej trawie jęczmiennej są możliwe
+                        tylko podczas kilku najważniejszych dla rośliny dni w każdym miesiącu.</b></div>
+                <br>
+                <div>Młoda trawa jęczmienna znana jest także jako źródło przeciwutleniaczy, a
+                    najważniejsze z nich to O-glikozyl, isovitexin, dysmutaza ponadtlenkowa
+                    (SOD), katalaza (CAT), witamina E, witamina C, i karotenoidy. (Bamforth
+                    1983; Aruoma &amp; Halliwell 1987; Kitta et al. 1992; Osawa i in. 1992;
+                    Nakajima et al. 1998; Acar i in. 2001; Janda i in. 2003; Lee i in.
+                    2003).</div>
+                <br>
+                <div>Suplementy diety oparte na zielonych częściach roślin mają
+                    swoją tradycję, zwłaszcza w krajach Azji Wschodniej. Również w Stanach
+                    Zjednoczonych, jedzenie jest już uzupełniane Zieloną Żywnością, a w
+                    szczególności sokiem z jęczmienia.</div>
+                <br>
+                <div>Nie znajdziemy u nich mielonego siana jęczmiennego , tylko ekstrakt z jęczmienia,
+                    czyli wyciśnięty i odparowany w niskich temperaturach sok z trawy
+                    uprawianej w ściśle kontrolowanych warunkach. Badania przeprowadzone w
+                    Stanach Zjednoczonych i Japonii wykazały, że wyciąg z młodych liści
+                    jęczmienia pomaga leczyć wiele z dzisiejszych chorób i zaburzeń
+                    zdrowotnych, takich jak otyłość, cukrzyca, zaburzenia krążenia,
+                    zapalenie stawów, niedokrwistość, nadmiernie wysoki poziom cholesterolu,
+                    problemy nerek i raka (Nishiyama i in 1994;. Shibamoto et al 1994).
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div></section><section data-pcid="4016.2" id="kpg_136267" class="kedit" data-padding="20-20" style=";padding-top:20px;padding-bottom:20px">
+    <div class="container text-center">
+        <span class="keditable d-none"></span>
+        <img class="img-fluid kimgfilter8 lazy" alt="" title="" data-src="data/files/imbryklanie.jpg">
+    </div>
+</section><section data-pcid="4002" id="kpg_527586" class="kedit" data-padding="20-100" style=";padding-top:20px;padding-bottom:100px"><div class="container">
+    <div class="row">
+        <div class="col text-start">
+
+            <div class="keditable">
+                <div>
+                     <b>Niezwykłą cechą produktów pochodzących z młodego jęczmienia jest
+                        ich zdolność do degradacji pestycydów fosforoorganicznych (Durhamet al.
+                        1999).</b>
+                </div>
+                <div><b><br></b></div>
+                <div>Celem poniższego badania jest ocena zawartości wybranych
+                    parametrów odżywczych jęczmienia oraz jego hodowli w wybranych
+                    warunkach glebowych i klimatycznych. A w drugiej części : utrzymywanie
+                    poziomu składników odżywczych na odpowiednim poziomie i przetwarzanie
+                    ich na trzy różne sposoby: zamrażanie, suszenie sublimacyjne, suszenie
+                    płynu.</div>
+                <br>
+                <div><b>Badanie</b></div>
+                <div><b><br></b></div>
+                <div>Metody: Sucha masa została określona przez ocenę grawimetryczną (Davídek et al. 1981).</div>
+                <div>Białko: Zawartość określono metodą Kjehldal (Davídek et al. 1981). (…)</div>
+                <br>
+                <div>Aktywność enzymu superoxid dysmutazy był oceniany dzięki zastosowaniu zestawu
+                    Ransod. Zestaw ten (Brytyjska firma Randox) jest przeznaczony do analizy
+                    aktywności SOD w próbkach krwi. Dokonaliśmy niezbędnych modyfikacji
+                    poszczególnych faz postępowania, szczególnie przygotowanie próbki,
+                    odpowiednio do zastosowanego materiału roślinnego (Belcrediováet al.
+                    2006) w celu oceny aktywności katalazy spektrofotometrycznej. Metoda
+                    opiera się na pomiarze spadku absorbcji przy 240 nm (Bergmeyer1970).</div>
+                <br>
+                <div><b>Wniosek</b></div>
+                <br>
+                
+                <div>Wyniki tego badania dostarczają informacji, które mogą pomóc w wykorzystaniu
+                    ekstraktu z jęczmienia w postaci unikalnego i całkowicie naturalnego
+                    źródła cennych odżywczo substancji. Testy z tymi substancjami
+                    charakteryzują młode rośliny jęczmienia uprawiane w 2005 roku, wysiewane
+                    w dwóch miejscach i zbierane w trzech fazach wzrostu.</div>
+                <br>
+                <div>Analiza zawartości witaminy C, wszystkich polifenoli, kwasu ferulowego,
+                    monosacharydów, aminokwasów i oznaczanie aktywności katalazy przyniosły
+                    dane wskazujące, że jest to cenny materiał roślinny, na którym warto
+                    kontynuować bardziej szczegółowe badania.</div>
+                <br>
+                <div>Wyniki wskazują również, że zawartość substancji odżywczych, które są silnie uzależnione od fazy
+                    wzrostu. Zależność od odmiany jęczmienia i siła wzrostu wydają się
+                    mniej ważne.</div>
+                <div><strong>Badania:</strong></div>
+                <div><strong><br></strong></div>
+                <div></div>
+                <div>Acar O., Turkan I.,
+                    Ozdemir F. (2001): Superoxide dismutase and peroxidase activities in
+                    drought sensitive and resistant barley (Hordeum vulgare L.) varieties.Acta Physiologiae Plantarum,
+                    23: 351–356.</div>
+                <div>Aruoma
+                    O.I., Halliwell B. (1987): Superoxide dependent and ascorbate dependent
+                    formation of hydroxyl radical from hydrogen peroxide in the presence of
+                    iron. Are lactoferrin and transferrin promoters of hydroxyl-radical
+                    generation? Biochemical Journal, 241: 273–278.</div>
+                <div>Bamforth C.W.
+                    (1983): Superoxide dismutase in barley. Journal of Institute of
+                    Brewering, 89: 420–423. Belcrediová N., Ehrenbergerová J., Havlová P.
+                    (2006): Enzym superoxid dismutasa v zrnu ječmene a sladu. Acta
+                    Universitatis Agriculturae et Silviculturae Mendelianae Brunensis, LIV,
+                    No. 2: 7–14.</div>
+                <div>Bergmeyer H.V. (1970): Methoden der Enzymatischen Analyse. Verlag Chemie GmbH, Weinheim: 273–282.
+                </div>
+                <div>Davídek J., Janíček G., Pokorný J. (1981): Laboratorní příručka analýzy potravin. SNTL-ALFA, Praha:
+                    117–185.</div>
+                <div></div>
+                <div>Droushiotis
+                    D. (1984): The effect of variety and harvesting stage on forage
+                    production of barley in low rainfall environments. Journal of
+                    Agricultural Science, 102: 287–289.</div>
+                <div>Durham J., Ogata J., Nakajima
+                    S., Hagiwara Y., Shibamoto T. (1999): Degradation of organophosporous
+                    pesticides in aqueous extracts of young green barley leaves (Hordeum
+                    vulgare L.). Journal of the Science of Food and Agriculture, 79:
+                    1311–1314.</div>
+                <div>Holasova M., Fiedlerova V., Roubal P., Pechacova M.
+                    (2004): Biosynthesis of folates by lactic acid bacteria and
+                    propionibacteria in fermented milk. Czech Journal of Food Sciences, 22:
+                    175–181.</div>
+                <div></div>
+                <div></div>
+                <div>Janda T., Szalai G., Rios-Gonzales K., Veisz O., Pldi E.
+                    (2003): Comparative study of frost tolerance and antioxidant activity in
+                    cereals. Plant Science, 164: 301–306.Kitta K., Hagiwara Y., Shibamoto
+                    T. (1992): Antioxidative activity of an isoflavonoid
+                    2”-O-glycosylisovitexin isolated from barley leaves. Journal of
+                    Agricultural and Food Chemistry, 40: 1843–1845.</div>
+                <div></div>
+                <div></div>
+                <div>Lachman J.,
+                    Hosnedl V., Pivec V. (1997): Changes in the content of polyphenols in
+                    barley grains and pea seed after controlled accelerated ageing
+                    treatment. Scientia Agriculturae Bohemica, 28: 17–30.</div><br>
+                <div><b>Dalsze badania:</b></div>
+                <br>
+                <div>Lee
+                    S.H., Jew S.S., Chang P.S., Hong I.J., Hwang E.S., Kim K.S., Kim K.T.,
+                    Sung H.L. (2003): Free radical scavenging effect and antioxidant
+                    activities of barley leaves. Food Science and Biotechnology, 12:
+                    268–273.</div>
+                <div>Miller N.J., Rice-Evan S.C., Davies M.J., Gopinathan V., Milner A. (1993): A novel method for
+                    measuring antioxidant capacity and
+                    its application to monitoring the antioxidant status in premature
+                    neonates. Clinical Science, 84: 407–412.</div>
+                <div>Moore S., Stein W.H.
+                    (1954): Procedures for the chromatographic determination of amino acids
+                    on four per cent cross-linked sulfonated polystyrene resins. Journal of
+                    Biological Chemistry, 211: 893–906.</div>
+                <div></div>
+                <div></div>
+                <div>Nakajima S., Hagiwara Y.,
+                    Hagiwara H., Shibamoto T. (1998): Effect of the antioxidant
+                    2”-O-glycosylisovitexin from young green barley leaves on acetaldehyde
+                    formation in beer stored at 50°C for 90 days. Journal of Agricultural
+                    and Food Chemistry, 46: 1529–1531.</div>
+                <div></div>
+                <div></div>
+                <div>Nishiyama T., Hagiwara Y.,
+                    Hagiwara H., Shibamoto T. (1994): Inhibitory effect of 2”-O-glycosyl
+                    isovitexin and ?-tocopherol on genotoxic glyoxal formation in a lipid
+                    peroxidation system. Food and Chemical Toxicology, 32: 1047–1051.</div>
+                <div></div>
+                <div></div>
+                <div>Orsák
+                    M., Lachman J., Pivec V. (2000): Effect of UV-A and gamma-irradiation
+                    on the polyphenol levels in barley and pea seeds, seedlings and plants.
+                    Scientia Agriculturae Bohemica, 31: 181–196.</div>
+                <div></div>
+                <div></div>
+                <div>Osawa T., Katsuzaki
+                    H., Hagiwara Y., Shibamoto T. (1992): A novel antioxidant isolated from
+                    young green barley leaves. Journal of Agricultural and Food Chemistry,
+                    40: 1135–1138.</div>
+                <div></div>
+                <div></div>
+                <div>Shibamoto T., Hagiwara Y., Hagiwara H., Osawa
+                    J.(1994): A flavonoid with strong antioxidative activity isolated from
+                    young green barley leaves. American Chemical Society, Washington, ACS
+                    Symp., Ser. 547: 153–163.</div>
+                <div></div>
+                <div></div>
+                <div>Spackman D.H., Stein W.H., Moore S.
+                    (1958): Automatic recording apparatus for use in the chromatography of
+                    amino acids. Analytical Biochemistry, 30: 1190–1206.Zadoks J.C.,
+                    Chang T.T., Konzak G.F. (1974): A decimal code for growth stages of
+                    cereals. Weed Research, 14: 415–421. Received for publication July 13,
+                    2006 Accepted after corrections October 27, 2006</div>
+                <br>
+                <div>Żródło: http://www.agriculturejournals.cz/publicFiles/00089.pdf</div>
+                <br>
+                <div><b>Badania dr nauk med. M. Laciny 2002-2006 (zob. „Księga o napoju z trawy 2.”)</b></div>
+                <br>
+                <div>Enzymes and Enzyme Therapy. Cichoke, Anthony J., D.C. New Canaan, Conn.: Keats Publishing, Inc., 1994, p5ff.</div>
+                <p>
+                    Green Barley Essence. MUDr. Yoshihide Hagiwara, New Canaan, Conn.: Keats
+                    Publishing, Inc., 1986, p.8ff.<br>The Purification Prescription. Hendler, Sheldon, Saul, MUDr., Ph.D New
+                    York: William Morrow&amp;Co., Inc., 1991, p.216<br>Amber Waves of Grain. Jack, Alex a Gale. . New York:
+                    Japan Publications, Inc., 1992, p.102.<br>Výživa &amp; chiropraxe. Anthony J. Cichoke, MA, DC,
+                    DACBN<br>Možnosti
+                    potlačení aterosklerózy pomocí flavonoidů izolovaných ze zelených
+                    výhonků ječmene. Takashi Miyake, Yoshihide Hagiwara, Hideaki
+                    Hagiwara,Takayuki Shibamoto<br>Zdraví prospěšné účinky 2″-o-glykosylisovitexinu. Dr. Shibamoto, 10.
+                    březen 1999<br>Biochemický a biologický výzkum výtažku z mladých ječmenných výhonků. Alan L. Goldstein
+                    Washington, D.C.<br>The Complete Book of Juicing, Michael T. Murray, Rocklin, CA: Prima Publishing,
+                    1992<br>Antioxidative
+                    Activity of an Isoflavonoid, 2″-O-Glykosylisovitexin Isolated from
+                    Green Barley Leaves, Kitta K, Hagiwara Y, Shibamoto T, Journal of
+                    Agricultural and Food Chemistry, 40 (10): 1843-1845 Oct 1992.<br>Edible
+                    plant extracts modulate macrophage activity and bacterial mutagenesis.
+                    Benjamin Lau, T. Yamasaki, Intl Clin. Nutr. Rev. 12(3), 1992.<br>Mladý ječmen a laboratorní nálezy.
+                    MUDr. M. Lacina, pro Green Ways r. 2002<br>Komplet studiów i artykułów medycznych jest do zdobycia u
+                    doradców. </p>
+            </div>
+        </div>
+    </div>
+</div></section></main><footer id="footerContent"><section data-pcid="5500.2" id="kedit_tv5blokbp" class="kedit keditDark keditFooter keditFooter2" data-bgcolor="--color1_150" data-padding="0-0" style="background:var(--color1_150);padding-top:0px;padding-bottom:0px">
+
+  <div class="keditFooterLine1 container">
+      <div class="row">
+          <div class="col-lg-4">
+              <div class="kedit" id="kpg_5038931">
+              
+              <div class="keditable skiptranslate mt-4 keditFooterCompany"><strong>Republika Zielonej Żywności</strong><br><div>Kiełczów, Polska</div><div>tel. 881 957 757</div><div>mail: kontakt@republikazielonejzywnosci.com<br></div></div>
+              </div>
+          </div>
+          <div class="col-lg-8 d-flex flex-column">
+              <div class="kedit flex-fill" id="kpg_1391482"><div class="keditable"><div>			UWAGA</div><div>Autor strony internetowej w żaden sposób nie udziela porad 
+medycznych, ani nie przepisuje żadnego zastosowania techniki jako formy
+ leczenia fizycznych, emocjonalnych lub medycznych problemów, bez 
+konsultacji lekarza. Celem autora jest przedstawienie informacji 
+ogólnej natury, jako pomocy w poszukiwaniu możliwości rozwiązania 
+problemów. Dowody naukowe na skuteczność terapii znajdują się pod 
+zakładką “badania”.</div></div></div>
+              <div class="kedit keditFooterApp" id="kpg_8441993"><div class="footerHolder" id="keditFooterModule"><div class="social_fa social_bw social_bwh social_footer"><a target="_blank" href="https://www.facebook.com/61556983895824"><i class="fab fa-facebook-square fa-2x fa-fw"></i></a><a target="_blank" href="https://www.youtube.com/channel/UCGSK5HMh8n0YgvtLEKhaNZQ"><i class="fab fa-youtube fa-2x fa-fw"></i></a><a class="koSocialPhoneHover" href="tel:881 957 757"><i class="fas fa-fw fa-phone-square-alt"></i></a><a class="koSocialMailHover" href="mailto:kontakt@republikazielonejzywnosci.com"><i class="fas fa-fw fa-envelope"></i></a></div><span id="footerHitCounter">Liczba odwiedzin #</span></div></div>
+          </div>
+      </div>
+  </div>
+
+    <div class="keditFooterLine2 keditFooterLineDarker">
+        <div class="text-center container">
+            <div class="kedit" id="kpg_7890754"><div class="keditable keditFooterCopyright">Copyright ©2023 Republika Zielonej Żywności, Wszelkie prawa zastrzeżone.</div></div>
+        </div>
+    </div>
+
+</section></footer></div><a id="scrollToTop" href="javascript:void(null)"><i class="fa fa-fw fa-arrow-up"></i></a><script data-id="websiteLoading">$(document).ready(function(){
+
+						$('#websiteLoading').removeClass('isLoading-1');
+						setTimeout(function(){
+
+							var c=$('#websiteLoading');
+							if(c.length>0){
+								//$('body').attr('id','body');
+								$('body').addClass('body');
+								$('#websiteLoading').addClass('isLoaded');
+								setTimeout(function(){$('#websiteLoading').remove()},1000);
+							}
+
+						},3000);
+					});window.onload = function(){$('#websiteLoading').addClass('isLoaded');
+				//$('body').attr('id','body');
+				$('body').addClass('body');
+				setTimeout(function(){$('#websiteLoading').remove()},500);$(document).keyup(function(e){if((e.ctrlKey || e.metaKey)&&e.keyCode==27){window.location.href="?open=login";}});};</script><script>var koSiteName="Republika Zielonej Żywności";$(function(){$(".koLeftMenuOpener").removeClass("invisible");})</script><div id="searchHolder">
+		<form method="get" action="">
+			<div>Szukaj</div>
+			<input type="text" autocomplete="off" name="search" id="searchInput" class="form-control">
+			<button type="submit" class="btn btn-color1"><i class="fas fa-search"></i></button>
+			<button type="reset" class="btn btn-light" onclick="$('#searchHolder').removeClass('active')"><i class="fas fa-times"></i></button>
+		</form></div><script>var magnificPopupInit=function(){$('a.lightbox').magnificPopup({type:'image',gallery:{enabled:true}});}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css" /><script async src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js" onload="magnificPopupInit()"></script>
+
+	<div id="koHiddenEditor" class="logoutPlaceholder"><a href="index.php?open=login"><i class="fas fa-power-off"></i>			<span data-balloon-length="large" data-balloon-pos="up" data-balloon="Tylko Ty widzisz ten element, ponieważ jesteś administratorem strony">Otwórz edytor strony</span></a>
+				</div>
+
+	<!--Google Analytics--><script async src="https://www.googletagmanager.com/gtag/js?id=G-MWV2CBH5PX"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MWV2CBH5PX',{'anonymize_ip':true});</script>
+<script>var jQueryChecker_interval,jQueryChecker_count=0;$(function(){
+ jQueryChecker_interval=window.setInterval(function(){
+  if(typeof window.$ === "undefined" && typeof window.jQuery === "function"){
+   console.log("jQuery ($) has been lost, restoring...");
+   window.$=window.jQuery
+  }
+  jQueryChecker_count++;
+  if(jQueryChecker_count>10)
+   clearInterval(jQueryChecker_interval)
+ },1000)
+})</script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module" defer></script><script>var menuCaption = "Wybierz stronę";var timeLocale={YEAR_PLURAL: "Lata",YEAR_SINGULAR: "Rok",MONTH_PLURAL: "Miesi\u0105ce",MONTH_SINGULAR: "Miesi\u0105c",WEEK_PLURAL: "Tygodnie",WEEK_SINGULAR: "Tydzie\u0144",DAY_PLURAL: "Dni",DAY_SINGULAR: "Dzie\u0144",HOUR_PLURAL: "Godziny",HOUR_SINGULAR: "Godzina",MINUTE_PLURAL: "Minuty",MINUTE_SINGULAR: "Minuta",SECOND_PLURAL: "Sekund",SECOND_SINGULAR: "Sekunda"};</script><script type="text/javascript" src="//www.republikazielonejzywnosci.com/inc/live.js?4.5.3" async></script><link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" rel="stylesheet" /><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+	<!-- AOS (Animate on Scroll) -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script><script>$(function(){AOS.init({offset:-10,delay:100,duration:800,easing:'ease',anchorPlacement:'top-bottom'});})</script><script>$(function(e){var a = 400,s = e('#scrollToTop');e(window).scroll(function(){e(this).scrollTop() > a ? s.addClass('active') : s.removeClass('active')}), s.on('click',function(a){s.removeClass('active');e('body,html').animate({scrollTop: 0});})})</script><script type="text/javascript">$(function(){var dataText="supermode=stats&page=/jeczmien&referrer=https://www.republikazielonejzywnosci.com/";$.ajax({type: "POST",url: "index.php",data: dataText,success: function(data) {$("#footerHitCounter").text("Liczba odwiedzin #".replace(/#/,data)).addClass("show");}});});</script>
+<ul id="dropmenu_1_2" class="dropmenudiv dropfirst">
+<li><a href="jeczmien-w-tabletkach"><span>Jęczmień w tabletkach</span></a></li>
+<li><a href="jeczmien-w-proszku"><span>Jęczmień w proszku</span></a></li>
+<li><a href="jeczmien-podrozny"><span>Jęczmień podróżny</span></a></li>
+<li><a href="chlorella-tabletki"><span>Chlorella tabletki</span></a></li>
+<li><a href="chlorella-proszek"><span>Chlorella proszek</span></a></li>
+<li><a href="mix-jagoda-zurawina-burak"><span>Mix jagoda, żurawina, burak</span></a></li>
+</ul>
+<ul id="dropmenu_1_5" class="dropmenudiv dropfirst">
+<li class="item_active active"><a href="jeczmien"><span>Jęczmień</span></a></li>
+<li><a href="chlorella"><span>Chlorella</span></a></li>
+</ul><script type="text/javascript" id="jsMenusSetup">window.addEventListener('load',function(){ddlevelsmenu.setup("1", "topbar","0","0");});</script>
+<!--Start of Tawk.to Script--><script type="text/javascript">var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];s1.async=true;s1.src="https://embed.tawk.to/65d9e7a58d261e1b5f64d953/1hndj1ohv";s1.charset="UTF-8";s1.setAttribute("crossorigin","*");s0.parentNode.insertBefore(s1,s0);})();</script><!--End of Tawk.to Script-->
+</body></html>

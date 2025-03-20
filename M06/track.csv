@@ -1,0 +1,11 @@
+desc,time,tags
+Zadanie #1 w projekcie A dla klienta X,30,klient-X projekt-A phone
+Zadanie #2 w projekcie A dla klienta X,60,klient-X projekt-A
+Zadanie #3 w projekcie A dla klienta X,45,klient-X projekt-A
+Zadanie #1 w projekcie B dla klienta X,15,klient-X projekt-B quick phone
+Zadanie #2 w projekcie B dla klienta X,20,klient-X projekt-B
+Zadanie #3 w projekcie B dla klienta X,40,klient-X projekt-B phone
+Zadanie #1 w projekcie C dla klienta Y,30,klient-Y projekt-C
+Zadanie #1 w projekcie C dla klienta Y,60,klient-Y projekt-C
+Zadanie #2 w projekcie C dla klienta Y,65,klient-Y projekt-C
+Prywatne zadanie,15,other

@@ -1,0 +1,3 @@
+To jest plik i dane do zanonimizowania:
+Pesel 123456 zarobek 80000 zł
+Wiele innych danych rok 2025 
