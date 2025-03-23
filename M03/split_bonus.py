@@ -30,3 +30,18 @@ else:
 print(result)      
 print("Słów w pliku jest:",number_words)
 
+# Zadanie 3
+with open('M03/numbers.txt') as stream:
+    numbers = stream.read()
+content = numbers.split()
+numbers = []
+for number in content:
+    if number.isalnum():
+        numbers.append(int(number))
+string_numbers = []
+for number in numbers:
+    string_numbers.append(str(number))
+# print(string_numbers)
+with open('M03/dodatnie.txt', 'w') as writer:
+    writer.write(str(string_numbers))
+
