@@ -34,14 +34,21 @@ print("Słów w pliku jest:",number_words)
 with open('M03/numbers.txt') as stream:
     numbers = stream.read()
 content = numbers.split()
+
 numbers = []
+
+#from typing import List
+#numbers: List[int] = [int(num) for num in numbers if num.isalnum()]
+
 for number in content:
     if number.isalnum():
         numbers.append(int(number))
 string_numbers = []
 for number in numbers:
     string_numbers.append(str(number))
-# print(string_numbers)
+
 with open('M03/dodatnie.txt', 'w') as writer:
     writer.write(str(string_numbers))
+    result = "Zapisano do pliku tylko dodatnie"
+print(result)
 
