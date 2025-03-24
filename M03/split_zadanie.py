@@ -5,7 +5,8 @@ with open('M03/expenses.txt') as stream:
 content = numbers.split()
 print(content)
 int_content=[]
+total_sum= ""
 for nummber in content:
-    int_content.append(float(nummber))
-    suma = sum(int_content)    
-print(suma)
+        int_content.append(float(nummber))
+        total_sum = sum(int_content)
+print(total_sum)
