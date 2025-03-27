@@ -16,7 +16,6 @@ total: float = sum(expenses)
 minimum: float = min(expenses)
 maximum: float = max(expenses)
 avg: float = total / len(expenses)
-
 print("Suma wydatków to: ", total)
 print("Najmniejszy wydatek: ", minimum)
 print("Największy wydatek: ", maximum)
