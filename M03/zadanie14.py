@@ -7,7 +7,6 @@ with open(EXPENSES_FILENAME) as stream:
     content = stream.read()
 lines = content.split('\n')
 expenses = []
-# expenses_token = []
 for line in lines:
     token=line.split()
     if token:
