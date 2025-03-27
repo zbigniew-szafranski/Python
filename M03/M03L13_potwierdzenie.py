@@ -7,9 +7,17 @@ import glob
 
 pattern = input("Podaj pattern: ")
 filenames = glob.glob(pattern)
+
 for filename in filenames:
-    with open(filename, 'r') as stream:
-        content = stream.read()
-        lines = content.split('\n')
-        first_line = lines[0]
-    print(filename, ':', first_line)
+    print(filename)
+answer = input("czy chcesz kontynować [t/n] ")
+if answer.lower()  == 't':
+    for filename in filenames:
+        with open(filename, 'r') as stream:
+            content = stream.read()
+            lines = content.split('\n')
+            first_line = lines[0]
+        print(first_line)
+    print("Success")
+else:
+    print('Anulowano')
