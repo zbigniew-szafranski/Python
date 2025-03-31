@@ -3,21 +3,35 @@
 # Następnie pozwól użytkownikowi wprowadzić słowo i wyświetl w ilu komentarzach pojawia się to słowo?
 # Wielkość liter nie powinna mieć znaczenia.
 # Pozbądź się znaków interpunkcji.
+from typing import List
+
 INPUT_FILE = "M03/comments.txt"
 PUNCTUATIONS = "$%^&*()_+=-,.:;?!"
 comments_list = []
-count = 0
+word_list = []
 
 with open(INPUT_FILE) as stream:
-    comments = stream.read()
-    for word in comments.split("\n"):
-        for symbol in PUNCTUATIONS:
-            line = word.replace(symbol, '')
-            words = line.split()
-        comments_list.append(words)
-word = input("Podaj słwo: ")
-word_lower = word.lower()
+    content = stream.read()
+lines = content.split('\n')
+for line in lines:
+    line = line.lower()
+    for punc in PUNCTUATIONS:
+        line = line.replace(punc, '')
+    words: List[str] = line.split()
+    comments_list.append(words)
+answer = input("Podaj słwo: ").lower()
+answer = answer.lower().split()
+
+count = 0
 for comment in comments_list:
-    if word_lower in comment:
-        count +=1
-print(f"Słowo '{word}' pojawiło się w {count} komentarzach")
+    found = False
+    for word in answer:
+        if word in comment:
+            found = True
+    count+= found
+
+# print(f"{count} komentarze zawiera przynajmniej jedno ze słów: '{answer}'")
+print(count, 'komentarzy zawiera przynajmniej jedno ze słów: ', end=' ')
+for word in answer:
+    print(word, end=' ')
+print()
