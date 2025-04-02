@@ -9,3 +9,18 @@
 # [zadanie]
 #
 # [rozwiązanie]
+
+import os
+files = []
+list_of_path = []
+NEGATIVE_COMMENTS = 'M03/data/aclImdb/train/neg'
+with os.scandir(NEGATIVE_COMMENTS) as entries:
+    for entry in entries:
+        files = entry.path.split()
+        for file in files:
+            list_of_path.append(file)
+        # print(list_of_path)
+with open(list_of_path) as stream:
+    for path in list_of_path:
+        content = stream.read()
+        print(content)
