@@ -9,20 +9,62 @@
 # 7. Cały komentarz uznajemy za pozytywny, gdy jego sentyment jest > 0, a negatywny gdy jest < 0.
 import os
 
-lists_of_path = []
+lists_of_path_negative = []
+lists_of_path_positive =[]
 negative = []
+positive = []
+REMOVE_BR = '<br'
+PUNCTATIONS ='.>/\,()-?!'
 NEGATIVE_COMMENTS_PATH = 'M03/data/aclImdb/train/neg'
+POSITIVE_COMMENTS_PATH = 'M03/data/aclImdb/train/pos'
 with os.scandir(NEGATIVE_COMMENTS_PATH) as entries:
     for entry in entries:
         files = entry.path
-        lists_of_path.append(files)
+        lists_of_path_negative.append(files)
 
-for path in lists_of_path:
+for path in lists_of_path_negative:
     with open(path) as stream:
-        content = stream.read().split('\n')
-        print(content)
-        # for c  in  content:
-        #     words=  c.split()
-        #     negative.append(words)
-        #     print(negative)
+        lines = stream.read().strip().lower()
+        for punc in PUNCTATIONS:
+            lines = lines.replace(punc, '')
+        for punc in REMOVE_BR:
+            lines = lines.replace(punc, '')
+        words_neg = lines.split()
+        negative.append(words_neg)
 
+with os.scandir(POSITIVE_COMMENTS_PATH) as entries:
+    for entry in entries:
+        files = entry.path
+        lists_of_path_positive.append(files)
+
+for path in lists_of_path_positive:
+    with open(path) as stream:
+        lines = stream.read().strip().lower()
+        for punc in PUNCTATIONS:
+            lines = lines.replace(punc, '')
+        for punc in REMOVE_BR:
+            lines = lines.replace(punc, '')
+        words_pos= lines.split()
+        positive.append(words_pos)
+user_comments = input("Write a comment, please: ").lower()
+user_comments = user_comments.split()
+count_all = 0
+count_positive =0
+for comments in positive:
+    found = False
+    for word in user_comments:
+        if word in comments:
+            found = True
+    count_positive+=found
+
+count_negative = 0
+for comments in negative:
+    found = False
+    for word in user_comments:
+        if word in comments:
+            found = True
+    count_negative+=found
+
+# sentiment = (count_positive-count_negative)/count_all
+print('pos: ', count_positive)
+print('neg: ', count_negative)
