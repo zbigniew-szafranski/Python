@@ -8,16 +8,21 @@
 # 6. Sentyment całego tego komentarza to średnia arytmetyczna sentymentu wszystkich słów. Tak więc wystarczy zsumować sentyment poszczególnych słów i następnie taką sumę podzielić przez liczbę słów. W ten sposób sentyment całego komentarza też będzie z zakresu od -1.0 do +1.0.
 # 7. Cały komentarz uznajemy za pozytywny, gdy jego sentyment jest > 0, a negatywny gdy jest < 0.
 import os
+
 lists_of_path = []
-NEGATIVE_COMMENTS = 'M03/data/aclImdb/train/neg'
-with os.scandir(NEGATIVE_COMMENTS) as entries:
+negative = []
+NEGATIVE_COMMENTS_PATH = 'M03/data/aclImdb/train/neg'
+with os.scandir(NEGATIVE_COMMENTS_PATH) as entries:
     for entry in entries:
-        files = entry.path.split()
+        files = entry.path
         lists_of_path.append(files)
 
-# print(lists_of_path)
-# for path in lists_of_path:
-    # with open(lists_of_path) as stream:
-    #     content = stream.read()
-    #     print(content)
+for path in lists_of_path:
+    with open(path) as stream:
+        content = stream.read().split('\n')
+        print(content)
+        # for c  in  content:
+        #     words=  c.split()
+        #     negative.append(words)
+        #     print(negative)
 

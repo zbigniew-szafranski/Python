@@ -35,3 +35,4 @@ print(count, 'komentarzy zawiera przynajmniej jedno ze słów: ', end=' ')
 for word in answer:
     print(word, end=' ')
 print()
+print(comments_list)
