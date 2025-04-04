@@ -45,7 +45,7 @@ for path in lists_of_path_positive:
         lines = lines.replace(REMOVE_BR, '')
         words_pos= lines.split()
         positive.append(words_pos)
-user_comments = input("Write a comment, please: ").lower()
+user_comments = input("Write a comment, ONLY English please: ").lower()
 for punc in PUNCTATIONS:
     user_comments= user_comments.replace(punc, '')
 user_comments = user_comments.replace(REMOVE_BR, '')
