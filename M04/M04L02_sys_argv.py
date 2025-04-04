@@ -10,11 +10,23 @@
 
 import sys
 
+PUNCTATIONS = ".,?!"
 print('sys.argv =', sys.argv)
-print()
 
 for el in sys.argv:
-    print(type(el), el)
+    names, path = sys.argv
+with open(path) as stream:
+    content = stream.read().strip()
+    for punc in PUNCTATIONS:
+        content = content.replace(punc, "")
+lines = content.splitlines()
+words = content.split()
+lenght = len(content)
+words = len(words)
+print(f"Ilość znaków: {lenght}")
+print(f"Ilość słów: ", words)
+print(f"Ilość lini: ", len(lines))
+
 
 # Zwróć uwagę, że napisy możemy przekazywać także bez cudzysłowów jeśli tylko nie zawierają spacji. 
 
