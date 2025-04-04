@@ -8,14 +8,14 @@
 # # 6. Sentyment całego tego komentarza to średnia arytmetyczna sentymentu wszystkich słów. Tak więc wystarczy zsumować sentyment poszczególnych słów i następnie taką sumę podzielić przez liczbę słów. W ten sposób sentyment całego komentarza też będzie z zakresu od -1.0 do +1.0.
 # # 7. Cały komentarz uznajemy za pozytywny, gdy jego sentyment jest > 0, a negatywny gdy jest < 0.
 import os
-from unittest.mock import sentinel
-
+LINE = str= '-'
 lists_of_path_negative = []
 lists_of_path_positive =[]
 negative = []
 positive = []
-REMOVE_BR = '<br'
-PUNCTATIONS ='.>/\,()-?!'
+# REMOVE_BR = "<br /><br />"
+REMOVE_BR = "<br"
+PUNCTATIONS =".>/,()-?!"
 NEGATIVE_COMMENTS_PATH = 'M03/data/aclImdb/train/neg'
 POSITIVE_COMMENTS_PATH = 'M03/data/aclImdb/train/pos'
 with os.scandir(NEGATIVE_COMMENTS_PATH) as entries:
@@ -43,30 +43,46 @@ for path in lists_of_path_positive:
         lines = stream.read().strip().lower()
         for punc in PUNCTATIONS:
             lines = lines.replace(punc, '')
-        for punc in REMOVE_BR:
-            lines = lines.replace(punc, '')
+        # for punc in REMOVE_BR:
+        lines = lines.replace(REMOVE_BR, '')
         words_pos= lines.split()
         positive.append(words_pos)
 user_comments = input("Write a comment, please: ").lower()
 for punc in PUNCTATIONS:
     user_comments= user_comments.replace(punc, '')
-for punc in REMOVE_BR:
-    user_comments = user_comments.replace(punc, '')
+# for punc in REMOVE_BR:
+user_comments = user_comments.replace(REMOVE_BR, '')
 user_comments = user_comments.split()
+total_sentiment = 0
 for word in user_comments:
     negative_count = 0
     positive_count = 0
+    comments_all = positive_count + negative_count
     for comments in positive:
         if word in comments:
             positive_count+=1
     for comments in negative:
         if word in comments:
             negative_count+=1
+    comments_all = positive_count + negative_count
+    if comments_all ==0:
+        sentiment = 0.0
+        print("Słowo nie występuje w recenzji", "Sentyment: ", sentiment)
+    else:
+        sentiment = (positive_count-negative_count)/comments_all
+        print(f"Słowo '{word}' ma sentyment: {sentiment}")
+        total_sentiment+=sentiment
+for r in range(10):
+    print(LINE, end="")
+print()
 
-comments_all = positive_count+negative_count
-if comments_all ==0:
-    sentiment = 0.0
-    print("Słowo nie występuje w recenzji", "Sentyment: ", sentiment)
+if len(user_comments)>0:
+    sentiment_all = total_sentiment / len(user_comments)
+    print(f"Sentyment całej recenzji wynosi: ",sentiment_all)
 else:
-    sentiment = (positive_count-negative_count)/comments_all
-    print(f"Słowo '{word}' ma sentyment: {sentiment}")
+    sentiment_all = 0
+    print("brak komentarza")
+if sentiment_all > 0:
+    print("Komentarz poztywny")
+else:
+    print("Komentarz negatywny")
