@@ -13,7 +13,6 @@ lists_of_path_negative = []
 lists_of_path_positive =[]
 negative = []
 positive = []
-# REMOVE_BR = "<br /><br />"
 REMOVE_BR = "<br"
 PUNCTATIONS =".>/,()-?!"
 NEGATIVE_COMMENTS_PATH = 'M03/data/aclImdb/train/neg'
@@ -43,16 +42,15 @@ for path in lists_of_path_positive:
         lines = stream.read().strip().lower()
         for punc in PUNCTATIONS:
             lines = lines.replace(punc, '')
-        # for punc in REMOVE_BR:
         lines = lines.replace(REMOVE_BR, '')
         words_pos= lines.split()
         positive.append(words_pos)
 user_comments = input("Write a comment, please: ").lower()
 for punc in PUNCTATIONS:
     user_comments= user_comments.replace(punc, '')
-# for punc in REMOVE_BR:
 user_comments = user_comments.replace(REMOVE_BR, '')
 user_comments = user_comments.split()
+
 total_sentiment = 0
 for word in user_comments:
     negative_count = 0
@@ -67,7 +65,7 @@ for word in user_comments:
     comments_all = positive_count + negative_count
     if comments_all ==0:
         sentiment = 0.0
-        print("Słowo nie występuje w recenzji", "Sentyment: ", sentiment)
+        print("Słowo nie występuje w recenzji", "sentyment: ", sentiment)
     else:
         sentiment = (positive_count-negative_count)/comments_all
         print(f"Słowo '{word}' ma sentyment: {sentiment}")
@@ -75,14 +73,15 @@ for word in user_comments:
 for r in range(10):
     print(LINE, end="")
 print()
-
+sentiment_all = 0
 if len(user_comments)>0:
     sentiment_all = total_sentiment / len(user_comments)
-    print(f"Sentyment całej recenzji wynosi: ",sentiment_all)
+    sentiment_pos = "pozytywny"
 else:
     sentiment_all = 0
     print("brak komentarza")
 if sentiment_all > 0:
-    print("Komentarz poztywny")
+    sentiment_result = "pozytywny"
 else:
-    print("Komentarz negatywny")
+    sentiment_result = "negatywny"
+print(f"Sentyment recenzji jest - {sentiment_result} i wynosi {sentiment_all}")
