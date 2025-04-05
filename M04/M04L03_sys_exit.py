@@ -1,4 +1,4 @@
-### 🔴 Jak przedwcześnie zakończyć działanie programu?
+lini### 🔴 Jak przedwcześnie zakończyć działanie programu?
 
 # W tym celu wywołujemy sys.exit() przekazując kod zakończenia programu.
 
