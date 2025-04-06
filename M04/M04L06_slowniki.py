@@ -16,7 +16,7 @@ print('person =', person)
 
 print("person['first_name'] =", person['first_name'])  # ==> Jan  # w ten sposób wyświetlamy wartość dla danego klucza
 
-# print(person['nie-istnieje'])  # ==> KeyError  
+# print(person['nie-istnieje'])  # ==> KeyError
 lista = ['A', 'B', 'C']
 # print(lista[5])  # ==> IndexError  # w przypadku niepoprawnego indexu dla list otrzymujemy błąd IndexError
 
