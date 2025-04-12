@@ -14,17 +14,11 @@ import sys
 IGNORE_MISSING_PARNAME = '--ignore-missing'
 filenames = sys.argv[1:]
 PUNCTUATIONS = ".,?!"
-# if not filenames:
-#     print("Missing filename(s)")
-#     sys.exit(1)
+
 ignore_miss = False
 if IGNORE_MISSING_PARNAME in filenames:
     ignore_miss = True
     filenames.remove(IGNORE_MISSING_PARNAME)
-
-# ignore_missing = IGNORE_MISSING_PARNAME in filenames
-# if ignore_missing:
-#     filenames.remove(IGNORE_MISSING_PARNAME)
 
 print(" LINES  WORDS  CHARS  FILENAME")
 for filename in filenames:
@@ -35,10 +29,6 @@ for filename in filenames:
                 content = content.replace(punc, "")
     except FileNotFoundError:
         content = None
-
-    # if content is None and not ignore_missing:
-    #     print('Missing file(s)', filename)
-    #     sys.exit(1)
 
     if content is None:
         lines_counter = '-'
