@@ -1,0 +1,159 @@
+Informacje ogólne
+
+Odpowiedź serwisu zwracana jest albo w formacie JSON albo XML, zależnie od wymagań klienta. Format odpowiedzi można wskazać na dwa sposoby – za pomocą parametru zapytania ?format albo przy pomocy nagłówka HTTP Accept:
+
+    format JSON: nagłówek Accept: application/json lub parameter ?format=json
+    format XML: nagłówek Accept: application/xml lub parameter ?format=xml
+
+Jeśli nie określono formatu zwracany jest JSON.
+
+Dane archiwalne dostępne są odpowiednio:
+
+    dla kursów walut – od 2 stycznia 2002 r.,
+    dla cen złota – od 2 stycznia 2013 r.
+
+przy czym pojedyncze zapytanie nie może obejmować przedziału dłuższego, niż 93 dni.
+
+Zakres czasowy dla wyników zapytania można określić na jeden z poniższych sposobów:
+
+    aktualnie obowiązujące dane - ostatnia opublikowana wartość obowiązująca w momencie wykonania zapytania,
+    dane opublikowane w dniu dzisiejszym - wartość opublikowana bieżącego dnia,
+    seria danych z ostatnich N notowań,
+    dane dla konkretnej daty publikacji,
+    seria danych z zadanego przedziału dat.
+
+Opis funkcji API dotyczących kursów walut
+
+Dane kursów walut udostępnianie są na dwa sposoby:
+
+    jako kompletna tabela kursów (lub seria tabel kursowych) określonego typu,
+    jako kurs (lub seria kursów) pojedynczej waluty dla określonego typu tabeli oraz symbolu waluty.
+
+Parametry zapytań o kursy walut
+
+    {table} – typ tabeli (A, B, lub C)
+    {code} – trzyliterowy kod waluty (standard ISO 4217)
+    {topCount} – liczba określająca maksymalną liczność zwracanej serii danych
+    {date}, {startDate}, {endDate} – data w formacie RRRR-MM-DD (standard ISO 8601)
+Zapytania o kompletne tabele
+
+Wzory zapytań o kompletne tabele kursów walut
+
+    Aktualnie obowiązująca tabela kursów typu {table}
+
+    https://api.nbp.pl/api/exchangerates/tables/{table}/
+
+    Seria ostatnich {topCount} tabel kursów typu {table}
+
+    https://api.nbp.pl/api/exchangerates/tables/{table}/last/{topCount}/
+
+    Tabela kursów typu {table} opublikowana w dniu dzisiejszym (albo brak danych)
+
+    https://api.nbp.pl/api/exchangerates/tables/{table}/today/
+
+    Tabela kursów typu {table} opublikowana w dniu {date} (albo brak danych)
+
+    https://api.nbp.pl/api/exchangerates/tables/{table}/{date}/
+
+    Seria tabel kursów typu {table} opublikowanych w zakresie dat od {startDate} do {endDate} (albo brak danych)
+
+    https://api.nbp.pl/api/exchangerates/tables/{table}/{startDate}/{endDate}/
+
+Zapytania o pojedynczą walutę
+
+Wzory zapytań o kurs pojedynczej waluty
+
+    Aktualnie obowiązujący kurs waluty {code} z tabeli kursów typu {table}
+
+    https://api.nbp.pl/api/exchangerates/rates/{table}/{code}/
+
+    Seria ostatnich {topCount} kursów waluty {code} z tabeli kursów typu {table}
+
+    https://api.nbp.pl/api/exchangerates/rates/{table}/{code}/last/{topCount}/
+
+    Kurs waluty {code} z tabeli kursów typu {table} opublikowany w dniu dzisiejszym (albo brak danych)
+
+    https://api.nbp.pl/api/exchangerates/rates/{table}/{code}/today/
+
+    Kurs waluty {code} z tabeli kursów typu {table} opublikowany w dniu {date} (albo brak danych)
+
+    https://api.nbp.pl/api/exchangerates/rates/{table}/code}/{date}/
+
+    Seria kursów waluty {code} z tabeli kursów typu {table} opublikowanych w zakresie dat od {startDate} do {endDate} (albo brak danych)
+
+    https://api.nbp.pl/api/exchangerates/rates/{table}/{code}/{startDate}/{endDate}/
+
+Opis parametrów odpowiedzi dot. kursów walut
+
+    Table – typ tabeli
+    No – numer tabeli
+    TradingDate – data notowania (dotyczy tabeli C)
+    EffectiveDate – data publikacji
+    Rates – lista kursów poszczególnych walut w tabeli
+    Country – nazwa kraju
+    Symbol – symbol waluty (numeryczny, dotyczy kursów archiwalnych)
+    Currency – nazwa waluty
+    Code – kod waluty
+    Bid – przeliczony kurs kupna waluty (dotyczy tabeli C)
+    Ask – przeliczony kurs sprzedaży waluty (dotyczy tabeli C)
+    Mid – przeliczony kurs średni waluty (dotyczy tabel A oraz B)
+    Przykłady zapytań
+Kursy walut
+
+    Aktualnie obowiązujący kurs średni waluty CHF
+
+    https://api.nbp.pl/api/exchangerates/rates/a/chf/
+
+    Notowanie kursu kupna i sprzedaży USD opublikowana w dniu dzisiejszym
+    Jeśli dzisiejsza tabela nie została jeszcze opublikowana zwracany jest kod błędu 404
+
+    https://api.nbp.pl/api/exchangerates/rates/c/usd/today/
+
+    Notowanie kursu kupna i sprzedaży USD z 2016-04-04 w formacie JSON
+
+    https://api.nbp.pl/api/exchangerates/rates/c/usd/2016-04-04/?format=json
+
+    Aktualnie obowiązująca tabela typu A kursów średnich walut obcych
+
+    https://api.nbp.pl/api/exchangerates/tables/a/
+
+    Tabela typu A opublikowana w dniu dzisiejszym
+    Jeśli dzisiejsza tabela nie została jeszcze opublikowana zwracany jest kod błędu 404
+
+    https://api.nbp.pl/api/exchangerates/tables/a/today/
+
+    Seria ostatnich 10 notowań kursu średniego waluty GBP w formacie JSON
+
+    https://api.nbp.pl/api/exchangerates/rates/a/gbp/last/10/?format=json
+
+    Seria ostatnich 10 notowań kursu kupna i sprzedaży waluty USD w formacie XML
+
+    https://api.nbp.pl/api/exchangerates/rates/c/usd/last/10/?format=xml
+
+    Seria kursów średnich GBP z przedziału dat od 2012-01-01 do 2012-01-31
+
+    https://api.nbp.pl/api/exchangerates/rates/a/gbp/2012-01-01/2012-01-31/
+
+    Kurs średni GBP z dnia 2012-01-02
+
+    https://api.nbp.pl/api/exchangerates/rates/a/gbp/2012-01-02/
+
+    Seria ostatnich 5 tabel typu A kursów średnich walut obcych
+
+    https://api.nbp.pl/api/exchangerates/tables/a/last/5/
+
+    Seria tabel typu A z przedziału dat od 2012-01-01 do 2012-01-31
+
+    https://api.nbp.pl/api/exchangerates/tables/a/2012-01-01/2012-01-31/
+
+    Tabela B z dnia 2016-03-30
+
+    https://api.nbp.pl/api/exchangerates/tables/b/2016-03-30/
+
+Komunikaty błędów
+
+W przypadku braku danych dla prawidłowo określonego zakresu czasowego zwracany jest komunikat 404 Not Found
+
+W przypadku zadania nieprawidłowo sformułowanych zapytań serwis zwraca komunikat 400 Bad Request
+
+W przypadku zapytania przekraczającego limit zwracanych danych serwis zwróci komunikat 400 Bad Request - Przekroczony limit 

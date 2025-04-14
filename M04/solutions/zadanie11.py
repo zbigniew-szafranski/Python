@@ -24,7 +24,8 @@ total_cases = data['Poland']['All']['confirmed']
 last_update = data['Poland']['All']['updated']
 print('Całkowita liczba zakażeń: ', total_cases)
 print('Ostatnia aktualizacja: ', last_update)
-
+print("--------------------")
+print("ZAGADKI OD AI")
 # Zagadka od AI
 # Super! No to jedziemy z małą zagadką 🔍🐍
 #
