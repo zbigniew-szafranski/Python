@@ -24,12 +24,12 @@ from M05L02_good_library import generate_username  # importujemy funkcję z modu
 # $ python M05/M05L02_name.py M05/users.txt
 
 import sys
+if __name__ == "__main__":
+    print(f"M05L02_main.__name__ =", __name__)
 
-print(f"M05L02_main.__name__ =", __name__)
-
-filename = sys.argv[1]
-with open(filename) as stream:
-    content = stream.read()
+    filename = sys.argv[1]
+    with open(filename) as stream:
+        content = stream.read()
     
 for name in content.split('\n'):
     username = generate_username(name)
