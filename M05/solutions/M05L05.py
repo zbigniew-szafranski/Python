@@ -7,9 +7,11 @@
 # Nazwy plików (filenames) oraz przełącznik (ignore_missing) powinny być w tej funkcji przekazane jako parametry. Przy czym drugi parametr powinien być opcjonalny. Jaką wybierzesz domyślną wartość?
 
 # W osobnej funkcji main() wywołaj funkcję print_raport przekazując wartości dla tych dwóch parametrów z sys.argv.
-""" Aplication to display file content.
-You can specify filenames to display their content in terminal.
-if import this module, you can use function print_raport(filenames, ignore_missing).
+"""
+Usage:
+    python M05/M05L05.py <filenames...> [--ignore-missing]
+Options:
+    --ignore-missing  No error on missing file.
 """
 
 import sys
@@ -17,22 +19,8 @@ import sys
 
 def print_raport(filenames, ignore_missing = False):
     """
-    Prints a report describing the number of lines, words, and characters in each file listed in filenames.
-
-    The function iterates over a list of filenames, reads the content of each file, and calculates the respective
-    counts of lines, words, and characters. If a file is missing, behavior depends on the 'ignore_missing' parameter:
-    it either skips the missing file with a warning or exits the program with an error.
-
-    Parameters
-    ----------
-    filenames: list of str
-        A list containing the names of the files to process.
-    ignore_missing: bool, optional
-        If True, missing files are ignored with exit. If False, missing files result in an error message only.
-
-    Returns
-    -------
-    None
+        Prints number of lines, words and characters for each file in 'filenames' list.
+        If 'ignore-missing' is True, then it ignores missing files and continues. Otherwise, it stops the program.
     """
 
     print(" LINES  WORDS  CHARS  FILENAME")
