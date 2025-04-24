@@ -7,3 +7,4 @@
 ### 🔴 Ćwiczenie
 
 # Wejdź na stronę Leroy Merlin na dowolną stronę z listą produktów. Otwórz narzędzia deweloperskie. Skopiuj XPATH nazw produktów. Następnie zmodyfikuj ten XPATH tak, aby znajdował nazwy wszystkich produktów, a nie tylko jednego.
+

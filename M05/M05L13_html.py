@@ -22,6 +22,13 @@ html = """
 
 # Znajdź w module lxml.html funkcjonalność odpowiedzialną za sprasowanie HTMLa, czyli przekształcenie go ze stringa na zagnieżdżoną strukturę reprezentowaną przez klasę lxml.html.HtmlElement. Jak znajdziesz tą informację? Gdzie znajduje się dokumentacja lxml?
 
-html_tree = fromstring(html)
-text_content = html_tree.text_content()
-print(text_content)
+dom = fromstring(html)
+elements = dom.xpath('//p[@id="main-p"]/b')
+elements = dom.xpath('//p')
+print(elements)
+element = elements[0]
+list_ = element.text_content()
+print(list_)
+
+
+

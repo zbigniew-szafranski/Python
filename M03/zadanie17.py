@@ -7,18 +7,29 @@ from typing import List
 
 INPUT_FILE = "M03/comments.txt"
 PUNCTUATIONS = "$%^&*()_+=-,.:;?!"
-comments_list = []
-word_list = []
+# comments_list = []
+# word_list = []
 
 with open(INPUT_FILE) as stream:
     content = stream.read()
 lines = content.split('\n')
-for line in lines:
+
+# poprawiłem to jak poznałem list_comprehension
+def punctuation(line):
     line = line.lower()
     for punc in PUNCTUATIONS:
         line = line.replace(punc, '')
-    words: List[str] = line.split()
-    comments_list.append(words)
+    words = line.split()
+    return words
+comments_list = [punctuation(line) for line in lines]
+
+# zostawiam to dla porównania
+# for line in lines:
+#     line = line.lower()
+#     for punc in PUNCTUATIONS:
+#         line = line.replace(punc, '')
+#     words: List[str] = line.split()
+#     comments_list.append(words)
 answer = input("Podaj słwo: ").lower()
 answer = answer.lower().split()
 
@@ -35,4 +46,3 @@ print(count, 'komentarzy zawiera przynajmniej jedno ze słów: ', end=' ')
 for word in answer:
     print(word, end=' ')
 print()
-print(comments_list)
