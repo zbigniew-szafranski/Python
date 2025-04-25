@@ -24,7 +24,7 @@
 names = ["Ala", "Bartek", "Ola", "Wojtek", "Ewa"]
 
 #Stwórz nową listę, w której będą tylko imiona dłuższe niż 3 litery, zamienione na duże litery.
-list_of_names = []
+
 list_of_names = [name.upper() for name in names if len(name) >3]
 print(list_of_names)
 
