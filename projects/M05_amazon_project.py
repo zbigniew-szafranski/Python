@@ -26,25 +26,29 @@
 # def main(...):
 # url_kaufland = "https://sklep.kaufland.pl/asortyment/swieze-artykuly.html"
 # pattern = "//div[@class='k-product-tile__text']"
+# pattern dla castoramy = "//div[@data-test-id='product-tile-title']"
+# url_sinsay = "https://www.sinsay.com/pl/pl/dom/dashboard-home?brick=B_Podstrona_Home_H&place=home"
+# pattern dla sinsay = "//div[@class='product-name-main']"
+
+# -*- coding: utf-8 -*-
 
 import click
 import requests
 from lxml.html import fromstring
 import sys
 
-sys.stdout.reconfigure(encoding='utf-8')
 
-
-def download_page(url: str):
+def download_page(url):
     """
     Fetches the HTML content of a given URL.
 
     :param url: The URL of the webpage to download.
-    :return: The raw HTML content as bytes.
+    :return: The raw HTML content as string.
     """
     response = requests.get(url)
     response.raise_for_status()
-    return response.content
+    response.encoding = "utf-8"
+    return response.text
 
 
 def parse_html(content):
@@ -67,7 +71,6 @@ def normalize_text(text):
     """
     return text.strip().replace("\n", " ")
 
-
 def extract_and_print_products(dom, xpath):
     """
     Extracts elements matching the given XPath and prints each one.
@@ -83,9 +86,9 @@ def extract_and_print_products(dom, xpath):
     for product in products:
         texts = product.xpath('.//text()')
         combined_text = " ".join(normalize_text(text) for text in texts if text.strip())
-
-        print(combined_text)
-        product_list.append(combined_text)
+        if combined_text:
+            print(combined_text)
+            product_list.append(combined_text)
 
     return product_list
 
@@ -114,5 +117,3 @@ def main(url: str, xpath):
 
 if __name__ == "__main__":
     main()
-
-
