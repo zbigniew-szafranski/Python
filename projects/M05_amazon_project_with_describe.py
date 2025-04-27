@@ -32,10 +32,11 @@ import requests
 from lxml.html import fromstring
 import sys
 
+# Configure console output encoding to support UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
 
 
-def download_page(url: str):
+def download_page(url: str) -> bytes:
     """
     Fetches the HTML content of a given URL.
 
@@ -43,11 +44,11 @@ def download_page(url: str):
     :return: The raw HTML content as bytes.
     """
     response = requests.get(url)
-    response.raise_for_status()
+    response.raise_for_status()  # Raise an exception for HTTP errors
     return response.content
 
 
-def parse_html(content):
+def parse_html(content: bytes):
     """
     Parses the given HTML content into a DOM object.
 
@@ -57,7 +58,7 @@ def parse_html(content):
     return fromstring(content)
 
 
-def normalize_text(text):
+def normalize_text(text: str) -> str:
     """
     Cleans and normalizes text by stripping whitespace
     and replacing newlines with spaces.
@@ -68,7 +69,7 @@ def normalize_text(text):
     return text.strip().replace("\n", " ")
 
 
-def extract_and_print_products(dom, xpath):
+def extract_and_print_products(dom, xpath: str):
     """
     Extracts elements matching the given XPath and prints each one.
     Returns the list of combined texts.
@@ -78,23 +79,25 @@ def extract_and_print_products(dom, xpath):
     :return: A list of product texts.
     """
     products = dom.xpath(xpath)
-    product_list = []
+    product_list = []  # List to collect products
 
     for product in products:
+        # Retrieve all text nodes within one `tile__text`
         texts = product.xpath('.//text()')
+        # Combine text nodes into a single line
         combined_text = " ".join(normalize_text(text) for text in texts if text.strip())
 
-        print(combined_text)
-        product_list.append(combined_text)
+        print(combined_text)  # Print to terminal
+        product_list.append(combined_text)  # Collect the product into the list
 
-    return product_list
+    return product_list  # Return the complete list
 
 
 @click.command()
 @click.argument("url")
 @click.argument("xpath")
 
-def main(url: str, xpath):
+def main(url: str, xpath: str):
     """
     Main function to download, parse, and extract product names
     from a webpage using a specified XPath.
@@ -105,11 +108,16 @@ def main(url: str, xpath):
     try:
         html_content = download_page(url)
         dom = parse_html(html_content)
+
+        # Extract products and print them in the process
         product_list = extract_and_print_products(dom, xpath)
+
+
     except requests.RequestException as e:
         print(f"Error fetching data from the URL: {e}")
     except Exception as e:
         print(f"Error processing data: {e}")
+
 
 
 if __name__ == "__main__":
