@@ -14,19 +14,19 @@ def clean_text(text):
     return cleaned_text
 
 def average_word_length(cleaned_text):
-    char_count = len(cleaned_text)
-    words_count = len(cleaned_text.split())
-    average_word = char_count / words_count
-    return average_word
+    try:
+        words = cleaned_text.split()
+        total_chars = sum(len(word) for word in words)
+        return total_chars / len(words)
+
+    except ZeroDivisionError:
+        return 0
 
 def print_average(average_word):
     print(f"Średnia długość słowa w Twoim tekście wynosi: {average_word} znaków")
 
 
 def main():
-    text = input("Podaj tekst do analizy: ")
-    cleaned = clean_text(text)
-    average = average_word_length(cleaned)
-    print_average(average)
+    print_average(average_word_length(clean_text(input("Podaj tekst do analizy: "))))
 if __name__ == "__main__":
     main()
