@@ -33,14 +33,14 @@ def count_tasks(tasks):
     return len(tasks)
 
 
-def download_tasks():
-    with open(PATH) as stream:
+def download_tasks(filename):
+    with open(filename) as stream:
         reader = csv.DictReader(stream)
         tasks = [Task(row) for row in reader]
         return tasks
 
 def main():
-    tasks_list = download_tasks()
+    tasks_list = download_tasks(PATH)
     print(FIELDNAMES)
     print(UNDERLINE)
     for task in tasks_list:
