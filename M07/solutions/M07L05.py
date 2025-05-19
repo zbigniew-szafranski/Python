@@ -29,8 +29,8 @@ def main(example: bool):
         todos = []
 
     try:
-        with open(DB_FILENAME, 'xb') as strean:
-            pickle.dump(todos, strean)
+        with open(DB_FILENAME, 'xb') as stream:
+            pickle.dump(todos, stream)
     except FileExistsError:
         print("Nie można stworzyć bazy - baza już istnieje!")
     else:
