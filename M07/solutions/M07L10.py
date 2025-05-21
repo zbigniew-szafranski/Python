@@ -1,4 +1,4 @@
-# W poprzednim ćwiczeniu zmień zachowanie programu tak, że jeżeli baza danych nie istnieje, wówczas zamiast wyświetlać błąd automatycznie stwórz w pamięci nową, pustą bazę.
+# Rozwiń poprzednie ćwiczenie tak, aby nie można było stworzyć TodoItem z pustym opisem (description). W którym miejscu sprawdzisz, czy mamy niepusty opis? W którym miejscu złapiesz wyjątek?
 
 from typing import List
 import pickle
