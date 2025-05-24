@@ -38,7 +38,7 @@ class Budget:
 
 
 def find_next_id(budget: List[Budget])->int:
-    ids = {b.id for bid in budget}
+    ids = {b.id for b in budget}
     counter = 1
     while counter in ids:
         counter += 1
@@ -79,12 +79,16 @@ def print_budget_summary(budget: List[Budget])-> None:
     print(f'{total:>5} {total:>5} {""} {""}')
 
 
-def add_budget(budget: List[Budget], amount: int, description: str)->Budget:
+def add_budget(description: str, amount: int, budget: List[Budget]) ->None:
     if amount < 0:
         raise ValueError("Amount must be positive")
-    next_id = find_next_id(budget)
-    budget.append(Budget(next_id, description, amount))
-    return budget
+    b = Budget(
+        id = find_next_id(budget),
+        description=description,
+        big=False,
+        amount=amount
+    )
+    budget.append(b)
 
 
 @click.group()
@@ -94,19 +98,16 @@ def cli():
 @click.argument("amount", type=int)
 @click.argument("description")
 def add(amount: int, description: str):
-    budget: List[Budget]
     budget = read_db_or_init()
-    budget = add_budget(budget, amount, description)
-    try:
-        save_db(budget)
-    except FileExistsError:
-        print("Error: Database file already exists")
-    else:
-        print(f"Added budget: {amount} {description}")
-    print_budget(budget)
+    add_budget(description, amount, budget)
+    save_db(budget)
+    print(f"Added budget: {amount} {description}")
 
 @cli.command()
 def report():
     budget: List[Budget]
     budget = read_db_or_init()
     print_budget(budget)
+
+if __name__ == "__main__":
+    cli()
