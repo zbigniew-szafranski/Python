@@ -19,6 +19,8 @@
 from dataclasses import dataclass
 from typing import List
 import pickle
+import sys
+import csv
 
 import click
 
@@ -35,6 +37,10 @@ class Budget:
     def __post_init__(self):
         if not self.description:
             raise ValueError("Required description")
+        self.amount = int(self.amount)
+        if self.amount <= 0:
+            print(self.amount)
+            raise ValueError("Amount must be positive")
 
 
 def find_next_id(budget: List[Budget])->int:
@@ -70,18 +76,17 @@ def print_budget(budget: List[Budget])-> None:
             big = "(!)"
         else:
             big = ""
-        print(f'{b.id:4} {b.amount:>5} {big} {b.description}')
-        print_budget_summary(budget)
+        print(f'{b.id:4} {b.amount:>8} {big:^10} {b.description}')
+    print_budget_summary(budget)
 
 
 def print_budget_summary(budget: List[Budget])-> None:
     total = sum(b.amount for b in budget)
-    print(f'{total:>5} {total:>5} {""} {""}')
+    print(f'TOTAL: {total:>5} {""} {""}')
 
 
 def add_budget(description: str, amount: int, budget: List[Budget]) ->None:
-    if amount < 0:
-        raise ValueError("Amount must be positive")
+
     b = Budget(
         id = find_next_id(budget),
         description=description,
@@ -90,24 +95,48 @@ def add_budget(description: str, amount: int, budget: List[Budget]) ->None:
     )
     budget.append(b)
 
+def import_expenses_from_csv(budget: List[Budget]) -> None:
+    with open('M07/expenses.csv') as stream:
+        reader = csv.DictReader(stream)
+        for row in reader:
+            b = Budget(
+                id = find_next_id(budget),
+                description=row['description'],
+                big=False,
+                amount=int(row['amount'])
+            )
+
 
 @click.group()
 def cli():
     pass
-@cli.command()
-@click.argument("amount", type=int)
-@click.argument("description")
-def add(amount: int, description: str):
-    budget = read_db_or_init()
-    add_budget(description, amount, budget)
-    save_db(budget)
-    print(f"Added budget: {amount} {description}")
 
 @cli.command()
 def report():
     budget: List[Budget]
     budget = read_db_or_init()
     print_budget(budget)
+
+@cli.command()
+@click.argument("amount", type=int)
+@click.argument("description")
+def add(amount: int, description: str):
+    budget = read_db_or_init()
+    try:
+        add_budget(description, amount, budget)
+    except ValueError as e:
+        print(">>>", e, "<<<")
+        sys.exit(1)
+
+    save_db(budget)
+    print(f"Added budget: {amount} {description}")
+
+@cli.command()
+@click.argument("import-csv")
+def import_csv():
+    budget = read_db_or_init()
+    import_csv(budget)
+
 
 if __name__ == "__main__":
     cli()
