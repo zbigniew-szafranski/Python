@@ -70,3 +70,22 @@ def print_budget(budget: List[Budget])-> None:
             big = "(!)"
         else:
             big = ""
+        print(f'{b.id:4} {b.amount:>5} {big} {b.description}')
+        print_budget_summary(budget)
+
+
+def print_budget_summary(budget: List[Budget])-> None:
+    total = sum(b.amount for b in budget)
+    print(f'{total:>5} {total:>5} {""} {""}')
+
+
+def add_budget(budget: List[Budget], amount: int, description: str)->Budget:
+    if amount < 0:
+        raise ValueError("Amount must be positive")
+    next_id = find_next_id(budget)
+    budget.append(Budget(next_id, description, amount))
+    return budget
+
+@click.group()
+def cli():
+    pass
