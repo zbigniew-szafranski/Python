@@ -86,6 +86,27 @@ def add_budget(budget: List[Budget], amount: int, description: str)->Budget:
     budget.append(Budget(next_id, description, amount))
     return budget
 
+
 @click.group()
 def cli():
     pass
+@cli.command()
+@click.argument("amount", type=int)
+@click.argument("description")
+def add(amount: int, description: str):
+    budget: List[Budget]
+    budget = read_db_or_init()
+    budget = add_budget(budget, amount, description)
+    try:
+        save_db(budget)
+    except FileExistsError:
+        print("Error: Database file already exists")
+    else:
+        print(f"Added budget: {amount} {description}")
+    print_budget(budget)
+
+@cli.command()
+def report():
+    budget: List[Budget]
+    budget = read_db_or_init()
+    print_budget(budget)
