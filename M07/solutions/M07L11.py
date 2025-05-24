@@ -1,27 +1,21 @@
 # Rozwiń poprzednie ćwiczenie tak, aby nie można było stworzyć TodoItem z pustym opisem (description). W którym miejscu sprawdzisz, czy mamy niepusty opis? W którym miejscu złapiesz wyjątek?
-
+from dataclasses import dataclass
 from typing import List
 import pickle
 import sys
 
-
 import click
 
 DB_FILENAME = 'todos.db'
-
+@dataclass
 class TodoItem:
-    def __init__(self, id: int, description: str, done: bool):
-        if not description:
+    id: int
+    description: str
+    done: bool
+
+    def __post_init__(self):
+        if not self.description:
             raise ValueError("Opis nie może być pusty")
-        self.id = id
-        self.description = description
-        self.done = done
-    def __repr__(self):
-        return f'TodoItem(id={self.id}, description={self.description}, done={self.done})'
-    def __eq__(self, other):
-        return self.id == other.id and self.description == other.description and self.done == other.done
-    def __str__(self):
-        return f'{self.id:<4} | {self.description:<30} | {str(self.done):<5}'
 
 def find_next_id(todos: List[TodoItem])->int:
     ids = {todo.id for todo in todos}
