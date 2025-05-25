@@ -17,95 +17,121 @@
 # 7. Wielkość wydatku musi być dodatnią liczbą. Gdzie umieścisz kod sprawdzający, czy jest to spełnione? W jaki sposób zgłosisz, że warunek nie jest spełniony?
 
 from dataclasses import dataclass
-from typing import List
+from typing import List, Dict
 import pickle
 import sys
 import csv
 
 import click
 
-
 DATABASE_FILE = "budget.db"
 
 @dataclass
-class Budget:
+class Expenses:
     id: int
     description: str
     amount: int
     big: bool = False
 
+    def __repr__(self):
+        return f"Expenses(id={self.id}, description={self.description!r}, amount={self.amount}, big={self.big})"
+
     def __post_init__(self):
-        if not self.description:
+        if not self.description or self.description.strip() == "":
             raise ValueError("Required description")
+
         self.amount = int(self.amount)
         if self.amount <= 0:
             print(self.amount)
             raise ValueError("Amount must be positive")
 
 
-def find_next_id(budget: List[Budget])->int:
-    ids = {b.id for b in budget}
+def find_next_id(expense: List[Expenses])->int:
+    ids = {e.id for e in expense}
     counter = 1
     while counter in ids:
         counter += 1
     return counter
 
 
-def read_db_or_init()->List[Budget]:
+def read_db_or_init()->List[Expenses]:
     try:
         with open(DATABASE_FILE, 'rb') as stream:
-            budget = pickle.load(stream)
+            expense = pickle.load(stream)
     except FileNotFoundError:
-        budget = []
-    return budget
+        expense = []
+    return expense
 
 
-def save_db(budget: List[Budget], overwrite: bool = True)->None:
+def save_db(expense: List[Expenses], overwrite: bool = True)->None:
     if overwrite:
         mode = 'wb'
     else:
         mode = 'xb'
     with open(DATABASE_FILE, mode) as stream:
-        pickle.dump(budget, stream)
+        pickle.dump(expense, stream)
 
 
-def print_budget(budget: List[Budget])-> None:
+def print_expenses(expense: List[Expenses])-> None:
     print(f'--ID-- -AMOUNT- -BIG- ----DESCRIPTION-----')
-    for b in budget:
-        if b.amount >= 1000:
+    for e in expense:
+        if e.amount >= 1000:
             big = "(!)"
         else:
             big = ""
-        print(f'{b.id:4} {b.amount:>8} {big:^10} {b.description}')
-    print_budget_summary(budget)
+        print(f'{e.id:4} {e.amount:>8} {big:^10} {e.description}')
+    print_expense_summary(expense)
 
 
-def print_budget_summary(budget: List[Budget])-> None:
-    total = sum(b.amount for b in budget)
+def print_expense_summary(expense: List[Expenses])-> None:
+    total = sum(e.amount for e in expense)
     print(f'TOTAL: {total:>5} {""} {""}')
 
 
-def add_budget(description: str, amount: int, budget: List[Budget]) ->None:
+def add_expense(description: str, amount: int, expense: List[Expenses]) ->None:
 
-    b = Budget(
-        id = find_next_id(budget),
+    b = Expenses(
+        id = find_next_id(expense),
         description=description,
         big=False,
         amount=amount
     )
-    budget.append(b)
+    expense.append(b)
 
-def import_expenses_from_csv(budget: List[Budget]) -> None:
-    with open('M07/expenses.csv') as stream:
+
+def export_expense_as_python(expense: List[Expenses]) -> None:
+    for e in expense:
+        print(e)
+
+
+def import_expenses_from_csv(filename: str) -> List[Expenses]:
+    with open(filename) as stream:
+        expenses = []
         reader = csv.DictReader(stream)
         for row in reader:
-            b = Budget(
-                id = find_next_id(budget),
-                description=row['description'],
-                big=False,
-                amount=int(row['amount'])
-            )
+            expense = create_expense_from_dict(row, expenses)
+            expenses.append(expense)
+    return expenses
 
+def create_expense_from_dict(row: Dict[str, str], expense: List[Expenses]) -> Expenses:
+    return Expenses(
+        id=find_next_id(expense),
+        description=row['description'],
+        amount=int(float(row['amount'])),
+        big= False
+    )
+
+
+def assign_ids_and_merge_expenses(current_expense: List[Expenses], new_expenses: List[Expenses]) -> None:
+    """Assigns unique IDs to new expenses and adds them to the existing budget.
+
+    Args:
+        current_expense: List of current expenses
+        new_expenses: List of new expenses to be added
+    """
+    for expense in new_expenses:
+        expense.id = find_next_id(current_expense)
+        current_expense.append(expense)
 
 @click.group()
 def cli():
@@ -113,30 +139,48 @@ def cli():
 
 @cli.command()
 def report():
-    budget: List[Budget]
-    budget = read_db_or_init()
-    print_budget(budget)
+    expense: List[Expenses]
+    expense = read_db_or_init()
+    print_expenses(expense)
 
 @cli.command()
 @click.argument("amount", type=int)
-@click.argument("description")
+@click.argument("description", required=True)
 def add(amount: int, description: str):
-    budget = read_db_or_init()
+    """Add new expense to expense.
+
+    AMOUNT must be positive.
+
+    DESCRIPTION is required with non-empty string""
+    """
+
+    expense = read_db_or_init()
     try:
-        add_budget(description, amount, budget)
+        add_expense(description, amount, expense)
     except ValueError as e:
         print(">>>", e, "<<<")
         sys.exit(1)
 
-    save_db(budget)
-    print(f"Added budget: {amount} {description}")
+    save_db(expense)
+    print(f"Added expense: {amount} {description}")
 
-@cli.command()
+@cli.command("import-csv")
 @click.argument("import-csv")
-def import_csv():
-    budget = read_db_or_init()
-    import_csv(budget)
+def import_expenses_from_csv_file(import_csv: str):
+    """Import expenses from CSV file to database in budget.db"""
+    current_expense: List[Expenses] = read_db_or_init()
+    imported_expenses: List[Expenses] = import_expenses_from_csv(import_csv)
 
+    assign_ids_and_merge_expenses(current_expense, imported_expenses)
+
+    save_db(current_expense)
+    print(f"Imported {len(imported_expenses)} expenses from {import_csv}")
+
+@cli.command("export-python")
+def export_expense_as_python_file():
+    """Export expense as Python code"""
+    expense: List[Expenses] = read_db_or_init()
+    print(expense)
 
 if __name__ == "__main__":
     cli()
