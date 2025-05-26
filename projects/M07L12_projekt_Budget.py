@@ -34,7 +34,12 @@ class Expenses:
     big: bool = False
 
     def __repr__(self):
-        return f"Expenses(id={self.id}, description={self.description!r}, amount={self.amount}, big={self.big})"
+        return (f"Expenses("
+                f"id={self.id},"
+                f"description={self.description!r},"
+                f"amount={self.amount},"
+                f"big={self.big})"
+                )
 
     def __post_init__(self):
         if not self.description or self.description.strip() == "":
@@ -139,6 +144,7 @@ def cli():
 
 @cli.command()
 def report():
+    """Print report of all expenses."""
     expense: List[Expenses]
     expense = read_db_or_init()
     print_expenses(expense)
