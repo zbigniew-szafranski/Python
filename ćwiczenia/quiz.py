@@ -8,20 +8,44 @@
 #  Użyj **`break`** do natychmiastowego zakończenia quizu w przypadku wpisania przez użytkownika komendy **`"exit"`**.
 
 import csv
+FILE = 'questions.csv'
 
-with open('questions.csv', 'r') as csvfile:
-    reader = csv.reader(csvfile)
-    for row in reader:
-        question = row[0]
-        answer = row[1]
+def load_questions(filename: str):
+    questions = []
+    with open(filename, newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            questions.append((row[0], row[1].lower()))
+    return questions
+
+def run_quiz(questions):
+    correct_answers = 0
+    for question, answer in questions:
         print(question)
-        user_answer = input("Podaj odpowiedź: ")
+        user_answer = input("Podaj odpowiedź(prawda/fałsz, skip/exit): ")
+
         match user_answer:
             case "skip":
+                print("Skipping answer")
                 continue
             case "exit":
+                print("Zakończono quiz")
                 break
-            case "prawda":
-                print("Poprawna odpowiedź!")
-            case "fałsz":
-                print("Niepoprawna odpowiedź!")
+
+        if user_answer == answer:
+            correct_answers += 1
+            print("Poprawna odpowiedź!")
+        else:
+            print(f"Nieprawidłowa odpowiedź. Prawidłowa odpowiedź to {answer}\n")
+    return correct_answers
+
+def main():
+    questions = load_questions(FILE)
+    correct_answers = run_quiz(questions)
+    print(f"Liczba poprawnych odpowiedzi: {correct_answers} poza {len(questions)} prawidłowymi odpowiedziami")
+
+
+if __name__ == "__main__":
+    main()
+
+
