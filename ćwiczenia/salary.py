@@ -12,7 +12,7 @@ class Manager(Employee):
         self.bonus = bonus
 
     def count_salary(self):
-        return self.salary + self.bonus
+        return super().count_salary() + self.bonus
 
 
 john = Employee('john', 500)
