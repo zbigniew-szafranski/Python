@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+import csv
+
 class Creature:
     def __init__(self, name, health, attack_power):
         self.health = health
@@ -17,6 +20,9 @@ class Creature:
     def special_stats(self):
         pass
 
+    def get_special_stat(self):
+        return None, 0
+
     def information(self):
         self.print_separate()
         print(f"Nazwa: {self.name}")
@@ -28,11 +34,35 @@ class Creature:
                 print(f"- {ability}")
         self.special_stats()
         self.print_separate()
-    
+
+    def save_to_csv(self):
+        with open('creatures.csv', "a") as writer:
+            csv_writer = csv.writer(writer)
+
+            if writer.tell() == 0:
+                csv_writer.writerow(['name', 'health', 'attack_power', 'abilities', 'special_stat'])
+
+            stat_name, stat_value = self.get_special_stat()
+
+            csv_writer.writerow([
+                self.name,
+                self.health,
+                self.attack_power,
+                self.abilities,
+                stat_name,
+                stat_value
+            ])
+
+@dataclass()
 class Skeleton(Creature):
-    def __init__(self,name = "Skeleton", health=100, attack_power = 15, bow_strength = 15):
-        super().__init__(name, health, attack_power)
-        self.bow_strength = bow_strength
+    bow_strength: int = 15
+    name: str = "Skeleton"
+    health: int = 100
+    attack_power: int = 15
+
+    def __post_init__(self):
+        super().__init__(self.name, self.health, self.attack_power)
+        self.abilities = []
         self.add_ability("Strzał precyzyjny")
         self.add_ability("Grad strzał")
         self.add_ability("Unik")
@@ -44,11 +74,19 @@ class Skeleton(Creature):
     def special_stats(self):
         print(f"Siła łuku: {self.bow_strength}")
 
+    def get_special_stat(self):
+        return "bow_strength", self.bow_strength
 
+@dataclass()
 class Zombie(Creature):
-    def __init__(self,name = "Zombie", health=150, attack_power=10, super_health=50):
-        super().__init__(name, health, attack_power)
-        self.super_health = super_health
+    name: str = "Zombie"
+    health: int =150
+    attack_power: int =10
+    super_health: int =50
+
+    def __post_init__(self):
+        super().__init__(self.name, self.health, self.attack_power)
+        self.abilities = []
         self.add_ability("Wskrzeszenie")
         self.add_ability("Zarażenie")
         self.add_ability("Regeneracja")
@@ -60,11 +98,19 @@ class Zombie(Creature):
     def special_stats(self):
         print(f"Wzmocnione zdrowie: {self.super_health}")
 
+    def get_special_stat(self):
+        return "Wzmocnione zdrowie", self.super_health
 
+@dataclass()
 class Goblin(Creature):
-    def __init__(self, name="Goblin", health=100, attack_power=10, thief=40):
-        super().__init__(name, health, attack_power)
-        self.thief = thief
+    name: str ="Goblin"
+    health: int =100
+    attack_power: int=10
+    thief: int=40
+
+    def __post_init__(self):
+        super().__init__(self.name, self.health, self.attack_power)
+        self.abilities = []
         self.add_ability("Kradzież kieszonkowa")
         self.add_ability("Ukrycie się")
         self.add_ability("Szybki sprint")
@@ -76,6 +122,8 @@ class Goblin(Creature):
 
     def special_stats(self):
         print(f"Zdolność kradzieży: {self.thief}")
+    def get_special_stat(self):
+        return "Szybka kradzież", self.thief
 
 
 class MonsterFactory:
@@ -91,16 +139,17 @@ class MonsterFactory:
             raise ValueError(f"Nieznany typ potwora >>>{monster_type}<<<")
 
 
-monsters = []
-for monster_type in ["skeleton", "nieznany_potwor", "zombie", "goblin"]:
-    try:
-        monster = MonsterFactory.create_monster(monster_type)
-        monsters.append(monster)
-    except ValueError as e:
-        print(f"Błąd: {e}")
-        print("Pomijam tworzenie tego potwora...")
-        continue
+def main():
+    skeleton = Skeleton()
+    zombie = Zombie()
+    goblin = Goblin()
 
-# Wyświetlamy informacje o wszystkich stworzonych potworach
-for monster in monsters:
-    monster.information()
+    monsters = [skeleton, zombie, goblin]
+
+    for monster in monsters:
+        monster.information()
+        monster.save_to_csv()
+
+if __name__ == "__main__":
+    main()
+
