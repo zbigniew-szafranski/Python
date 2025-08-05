@@ -10,6 +10,7 @@ class WeatherData:
     humidity: float
 
 #Interfejs dla obserwatora
+#pylint: disable=too-few-public-methods
 class Observer(ABC):
     @abstractmethod
     def update(self, weather_data: WeatherData) -> None:
@@ -55,7 +56,11 @@ class PhoneDisplay(Observer):
         return "Wyświetlacz telefonu 📱"
 
     def update(self, weather_data: WeatherData):
-        print(f"Telefon wyświetla: Temperatura {weather_data.temperature}st.C, Wilgotność {weather_data.humidity}")
+        print(
+            f"Telefon wyświetla: "
+            f"Temperatura {weather_data.temperature}st.C, "
+            f"Wilgotność {weather_data.humidity}"
+        )
 
 class DesktopDisplay(Observer):
 
@@ -63,7 +68,11 @@ class DesktopDisplay(Observer):
         return "Monitor komputera 🖥️"
 
     def update(self, weather_data: WeatherData):
-        print(f"Monitor wyświetla: Temperatura {weather_data.temperature}st.C, Wilgotność {weather_data.humidity}")
+        print(
+            f"Monitor wyświetla: "
+            f"Temperatura {weather_data.temperature}st.C, "
+            f"Wilgotność {weather_data.humidity}"
+        )
 
 weather_station = WeatherStation()
 
